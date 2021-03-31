@@ -1,0 +1,17 @@
+@import url(normalize.css);
+
+/* --------------- General configuration --------------- */
+:root {
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+img {
+  width: 100%;
+  height: auto;
+}
