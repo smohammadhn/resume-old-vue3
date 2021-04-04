@@ -38,11 +38,16 @@
           </h1>
           <h3>A front-end developer with lots of passion based in Iran.</h3>
         </div>
-        <img
-          class="hero__image"
-          src="images/profile-s@2x.png"
-          alt="smohammadhn profile picture"
-        />
+        <picture class="hero__image">
+          <source
+            type="image/png"
+            srcset="images/profile-s@1x.png 1x, images/profile-s@2x.png 2x"
+          />
+          <img
+            src="images/profile-s@2x.png"
+            alt="smohammadhn profile picture"
+          />
+        </picture>
       </div>
     </header>
 
