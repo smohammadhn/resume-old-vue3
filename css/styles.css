@@ -56,7 +56,6 @@ p {
 /* --------------- Links --------------- */
 a {
   text-decoration: none;
-  font-family: "Oxygen", Arial, Helvetica, sans-serif;
 }
 .link-arrow {
   color: var(--color-links);
@@ -65,7 +64,7 @@ a {
   font-weight: bold;
 }
 .link-arrow::after {
-  content: "-->";
+  content: "↠";
   margin-left: 5px;
   transition: 0.5s;
 }
@@ -115,13 +114,12 @@ a {
 }
 /* --------------- Blocks --------------- */
 .block {
-  width: 1210px;
+  max-width: 1210px;
   margin: 0 auto 3rem;
 }
 .block-sckewed-left {
   clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
 }
-
 /* --------------- Grids --------------- */
 .grid {
   display: grid;
@@ -220,6 +218,7 @@ a {
 .hero {
   max-width: 2560px;
   position: relative;
+  margin-bottom: 5rem;
 }
 .hero__image {
   width: 570px;
@@ -265,5 +264,110 @@ a {
   .hero__btn {
     margin-top: 4vw;
     text-align: start;
+  }
+}
+/* --------------- Cards --------------- */
+.card {
+  width: 250px;
+  height: 300px;
+  box-shadow: 0 0 8px rgb(202, 202, 202);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+.card:hover .card-link-container {
+  height: 35px;
+}
+.card__heading {
+  margin: 1.5rem 0 2.5rem 0;
+  font-size: 2.7rem;
+}
+.card__link {
+  font-size: 1.5rem;
+}
+.card-link-container {
+  transition: all 0.5s;
+  overflow: hidden;
+  height: 0;
+}
+.icon {
+  font-size: 5rem;
+}
+.card-primary {
+  background: var(--color-accent);
+}
+.card-primary .icon,
+.card-primary .card__link {
+  color: #fff;
+}
+.card-secondary {
+  background: #f6f6f8;
+}
+.card-secondary .icon,
+.card-secondary .card__link {
+  color: var(--color-accent);
+}
+
+/* --------------- Showcase block --------------- */
+.block-showcase {
+  display: grid;
+  grid-template-areas:
+    "heading"
+    "card1"
+    "card2"
+    "card3"
+    "infinity"
+    "motto";
+  align-items: center;
+  justify-items: center;
+  gap: 4rem;
+}
+.showcase__heading {
+  grid-area: heading;
+  color: var(--color-heading);
+  font-size: 3.5rem;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+.showcase__card1 {
+  grid-area: card1;
+}
+.showcase__card2 {
+  grid-area: card2;
+}
+.showcase__card3 {
+  grid-area: card3;
+}
+.showcase__infinity-icon {
+  grid-area: infinity;
+  font-size: 8rem;
+  color: var(--color-accent);
+  align-self: flex-end;
+}
+.motto {
+  grid-area: motto;
+  align-self: flex-start;
+}
+.motto h3 {
+  max-width: 6ch;
+  margin: 0;
+}
+@media screen and (min-width: 1024px) {
+  .block-showcase {
+    grid-template-areas:
+      "infinity heading heading heading"
+      "motto card1   card2   card3";
+    grid-template-columns: 100fr repeat(3, 300px);
+    gap: 0;
+  }
+  .showcase__infinity-icon {
+    justify-self: start;
+  }
+  .motto {
+    justify-self: start;
+  }
+  .motto h3 {
+    max-width: 1ch;
   }
 }
