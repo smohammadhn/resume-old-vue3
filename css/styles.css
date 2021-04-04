@@ -85,7 +85,6 @@ a {
 }
 .list-inline .list-item {
   display: inline-block;
-  margin-left: 3rem;
 }
 /* --------------- Buttons --------------- */
 .btn {
@@ -119,6 +118,10 @@ a {
   width: 1210px;
   margin: 0 auto 3rem;
 }
+.block-sckewed-left {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
+}
+
 /* --------------- Grids --------------- */
 .grid {
   display: grid;
