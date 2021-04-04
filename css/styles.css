@@ -1,4 +1,4 @@
-@import url(normalize.css);
+@import url(./normalize.css);
 
 /* --------------- General configuration --------------- */
 :root {
@@ -7,7 +7,7 @@
   --color-links: #7562df;
   --color-paragraph: #000;
   --color-accent: #7562e0;
-  --btn-border-radius: 2px;
+  --btn-border-radius: 4px;
   --logo-size: 70px;
 }
 *,
@@ -86,7 +86,7 @@ a {
 /* --------------- Buttons --------------- */
 .btn {
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 4vw;
 }
 .btn-primary {
   background: var(--color-accent);
@@ -95,10 +95,20 @@ a {
   color: #fff;
   border: 1px solid var(--color-accent);
   transition: all 0.4s ease-in;
+  padding: 2.7vw 6.3vw;
+  font-weight: 600;
 }
 .btn-primary:hover {
   background: #fff;
   color: var(--color-accent);
+}
+@media screen and (min-width: 768px) {
+  .btn {
+    font-size: 1.4vw;
+  }
+  .btn-primary {
+    padding: 1.5vw 3.5vw;
+  }
 }
 /* --------------- Blocks --------------- */
 .block {
@@ -180,72 +190,62 @@ a {
   }
 }
 /* --------------- Hero Block --------------- */
-.block-hero {
-  overflow: hidden;
+.hero {
+  max-width: 2560px;
   position: relative;
 }
-.hero__container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: grid;
-  grid-template-areas:
-    "content"
-    "image";
-  justify-items: center;
-  align-items: center;
-  gap: 1rem;
-}
-.hero__shape {
-  clip-path: circle(50% at 100% 100%);
-  background: var(--color-accent);
-}
 .hero__image {
-  width: 80%;
-  grid-area: image;
+  width: 570px;
   align-self: flex-end;
 }
 .hero__content {
-  grid-area: content;
-  text-align: center;
-  padding: 0 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5vw 2rem 2rem 6vw;
+  width: 100%;
 }
 .hero__content h3 {
   margin: 0;
-  font-size: 2rem;
   line-height: 1.5;
   letter-spacing: 1px;
+  font-size: 5.5vw;
 }
 .hero__content h1 {
-  margin: 1rem 0;
-  font-size: 5rem;
+  font-size: 11vw;
   line-height: 1;
 }
-.block-hero,
-.hero__shape,
-.hero__container {
-  height: 80vh;
-  width: 100%;
+.hero__btn {
+  margin-top: 2rem;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .hero__image-desktop {
+    display: none;
+  }
 }
 @media screen and (min-width: 768px) {
-  .hero__image {
-    width: 100%;
+  .hero__image-mobile {
+    display: none;
   }
-  .block-hero,
-  .hero__shape,
-  .hero__container {
-    height: 50vh;
+  .hero__image-desktop {
+    display: block;
   }
-  .hero__container {
-    grid-template-areas: "content image .";
-    grid-template-columns: 1fr 1fr 0.2fr;
-    justify-content: center;
+  .hero__content {
+    width: 50%;
   }
-}
-@media screen and (min-width: 1024px) {
-  .block-hero,
-  .hero__shape,
-  .hero__container {
-    height: 70vh;
+  .hero__content h3 {
+    font-size: 1.4vw;
+  }
+  .hero__content h1 {
+    font-size: 3.47vw;
+    line-height: 1;
+  }
+  .hero__content h1+h3 {
+
+  }
+  .hero__btn {
+    margin-top: 4vw;
+    text-align: start;
   }
 }
