@@ -8,7 +8,7 @@
   --color-paragraph: #000;
   --color-accent: #7562e0;
   --btn-border-radius: 4px;
-  --logo-size: 70px;
+  --logo-size: 60px;
 }
 *,
 *::before,
@@ -24,7 +24,7 @@ img {
 }
 /* --------------- Typography --------------- */
 body {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 2.4rem;
   line-height: 1.5;
   color: var(--color-body);
@@ -44,6 +44,10 @@ h2,
 h3 {
   color: var(--color-sub-heading);
   line-height: 1.1;
+}
+h2,
+h3 {
+  text-transform: capitalize;
 }
 p {
   margin-top: 0;
@@ -143,6 +147,14 @@ a {
   opacity: 1;
 }
 /* --------------- Navbar --------------- */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 2rem;
+}
 .navbar__logo {
   width: var(--logo-size);
   height: var(--logo-size);
@@ -154,24 +166,35 @@ a {
   fill: var(--color-accent);
   color: #000;
 }
-.navbar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0;
-  padding: 1rem;
-}
 .navbar .list {
   width: 100%;
   margin: 0;
 }
 .navbar .list-item {
-  font-size: 1.8rem;
+  font-size: 4vw;
   border-bottom: 1px solid var(--color-accent);
   padding: 1rem;
+  margin-left: 3rem;
+  font-weight: 600;
+  position: relative;
+}
+.list-item::after {
+  content: " ";
+  width: 0;
+  height: 5px;
+  position: absolute;
+  background: var(--color-accent);
+  left: 0;
+  bottom: 0;
+  transition: all 0.4s;
+}
+.list-item:hover::after {
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
+  .navbar {
+    padding: 1rem 5rem;
+  }
   .navbar__menu {
     display: none;
   }
@@ -187,6 +210,7 @@ a {
   }
   .navbar .list-item {
     border-bottom: none;
+    font-size: 1vw;
   }
 }
 /* --------------- Hero Block --------------- */
@@ -202,14 +226,16 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 5vw 2rem 2rem 6vw;
+  padding: 5vw 2rem 2rem 2rem;
   width: 100%;
+  text-align: center;
 }
 .hero__content h3 {
   margin: 0;
   line-height: 1.5;
-  letter-spacing: 1px;
+  word-spacing: 2px;
   font-size: 5.5vw;
+  max-width: 30ch;
 }
 .hero__content h1 {
   font-size: 11vw;
@@ -223,6 +249,8 @@ a {
 @media screen and (min-width: 768px) {
   .hero__content {
     width: 50%;
+    padding: 5vw 2rem 2rem 15vw;
+    text-align: start;
   }
   .hero__content h3 {
     font-size: 1.4vw;
