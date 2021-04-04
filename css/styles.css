@@ -2,6 +2,13 @@
 
 /* --------------- General configuration --------------- */
 :root {
+  --color-heading: #120845;
+  --color-sub-heading: #4b4567;
+  --color-links: #7562df;
+  --color-paragraph: #000;
+  --color-accent: #7562e0;
+  --btn-border-radius: 2px;
+  --logo-size: 70px;
 }
 *,
 *::before,
@@ -14,4 +21,231 @@ html {
 img {
   width: 100%;
   height: auto;
+}
+/* --------------- Typography --------------- */
+body {
+  font-family: "Oxygen", Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.5;
+  color: var(--color-body);
+  margin: 0;
+}
+h1 {
+  font-size: 7rem;
+  color: var(--color-heading);
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h2,
+h3 {
+  color: var(--color-sub-heading);
+  line-height: 1.1;
+}
+p {
+  margin-top: 0;
+}
+
+/* --------------- Links --------------- */
+a {
+  text-decoration: none;
+  font-family: "Oxygen", Arial, Helvetica, sans-serif;
+}
+.link-arrow {
+  color: var(--color-links);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.link-arrow::after {
+  content: "-->";
+  margin-left: 5px;
+  transition: 0.5s;
+}
+.link-arrow:hover::after {
+  margin-left: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
+  }
+}
+/* --------------- Lists --------------- */
+.list {
+  list-style: none;
+  padding-left: 0;
+  color: var(--color-heading);
+}
+.list-inline .list-item {
+  display: inline-block;
+  margin-left: 3rem;
+}
+/* --------------- Buttons --------------- */
+.btn {
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+.btn-primary {
+  background: var(--color-accent);
+  text-transform: uppercase;
+  border-radius: var(--btn-border-radius);
+  color: #fff;
+  border: 1px solid var(--color-accent);
+  transition: all 0.4s ease-in;
+}
+.btn-primary:hover {
+  background: #fff;
+  color: var(--color-accent);
+}
+/* --------------- Blocks --------------- */
+.block {
+  width: 1210px;
+  margin: 0 auto 3rem;
+}
+/* --------------- Grids --------------- */
+.grid {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+.grid--cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--cols-auto {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+/* --------------- collapsibles --------------- */
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.collapsible-expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
+/* --------------- Navbar --------------- */
+.navbar__logo {
+  width: var(--logo-size);
+  height: var(--logo-size);
+}
+.navbar__menu {
+  --menu-size: 32px;
+  width: var(--menu-size);
+  height: var(--menu-size);
+  fill: var(--color-accent);
+  color: #000;
+}
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 1rem;
+}
+.navbar .list {
+  width: 100%;
+  margin: 0;
+}
+.navbar .list-item {
+  font-size: 1.8rem;
+  border-bottom: 1px solid var(--color-accent);
+  padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .navbar__menu {
+    display: none;
+  }
+  .nav__container {
+    padding: 0.5rem 10rem 0;
+  }
+  .navbar .list {
+    width: auto;
+    display: flex;
+    max-height: 100%;
+    opacity: 1;
+    padding: 0 2rem;
+  }
+  .navbar .list-item {
+    border-bottom: none;
+  }
+}
+/* --------------- Hero Block --------------- */
+.block-hero {
+  overflow: hidden;
+  position: relative;
+}
+.hero__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-areas:
+    "content"
+    "image";
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
+}
+.hero__shape {
+  clip-path: circle(50% at 100% 100%);
+  background: var(--color-accent);
+}
+.hero__image {
+  width: 80%;
+  grid-area: image;
+  align-self: flex-end;
+}
+.hero__content {
+  grid-area: content;
+  text-align: center;
+  padding: 0 3rem;
+}
+.hero__content h3 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+.hero__content h1 {
+  margin: 1rem 0;
+  font-size: 5rem;
+  line-height: 1;
+}
+.block-hero,
+.hero__shape,
+.hero__container {
+  height: 80vh;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .hero__image {
+    width: 100%;
+  }
+  .block-hero,
+  .hero__shape,
+  .hero__container {
+    height: 50vh;
+  }
+  .hero__container {
+    grid-template-areas: "content image .";
+    grid-template-columns: 1fr 1fr 0.2fr;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .block-hero,
+  .hero__shape,
+  .hero__container {
+    height: 70vh;
+  }
 }
