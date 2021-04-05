@@ -24,29 +24,34 @@
       /></a>
       <img class="navbar__menu" src="images/menu.svg" alt="" />
       <ul class="list collapsible__content">
-        <li class="list-item"><a href="#">Contact me</a></li>
-        <li class="list-item"><a href="#">My Resume</a></li>
-        <li class="list-item"><a href="#">My projects</a></li>
+        <li class="list-item border-animation"><a href="#">Contact me</a></li>
+        <li class="list-item border-animation"><a href="#">My Resume</a></li>
+        <li class="list-item border-animation"><a href="#">My projects</a></li>
       </ul>
     </nav>
     <!-- Hero BLock -->
-    <section class="hero">
-      <picture>
-        <source media="(max-width: 767px)" srcset="images/Banner-mobile.jpg" />
-        <source media="(min-width: 768px)" srcset="images/Banner.jpg" />
-        <img src="images/Banner.jpg" alt="Hero section Banner" />
-      </picture>
-      <div class="hero__content">
-        <h3>Hi there, I'm</h3>
-        <h1>
-          S.Mohammad <br />
-          Hosseininejad
-        </h1>
-        <h3>A front-end developer with lots of passion based in Iran.</h3>
-        <div class="hero__btn">
-          <a href="#" class="btn btn-primary">Contact me</a>
+    <section class="hero-block">
+      <section class="hero">
+        <picture>
+          <source
+            media="(max-width: 767px)"
+            srcset="images/Banner-mobile.jpg"
+          />
+          <source media="(min-width: 768px)" srcset="images/Banner.jpg" />
+          <img src="images/Banner.jpg" alt="Hero section Banner" />
+        </picture>
+        <div class="hero__content">
+          <h3>Hi there, I'm</h3>
+          <h1>
+            S.Mohammad <br />
+            Hosseininejad
+          </h1>
+          <h3>A front-end developer with lots of passion based in Iran.</h3>
+          <div class="hero__btn">
+            <a href="#" class="btn btn-primary">Contact me</a>
+          </div>
         </div>
-      </div>
+      </section>
     </section>
 
     <!-- showcase block -->
@@ -79,6 +84,36 @@
         <i class="fas fa-infinity showcase__infinity-icon"></i>
         <div class="motto">
           <h3>Become perfect or die trying.</h3>
+        </div>
+      </div>
+    </section>
+    <!-- projects block -->
+    <section class="block">
+      <h2 class="project__heading">
+        projects I did, <br />
+        and businesses I helped.
+      </h2>
+      <div class="project-row">
+        <div class="project-item">
+          <img class="project-item__image" src="images/project1.png" alt="" />
+          <h3 class="project-item__heading">
+            <a class="border-animation" href="#">hivasls</a>
+          </h3>
+          <p class="project-item__content">
+            Shokuh-e-hiva second language school provides amazing atmosphere for
+            learning English as a second language.
+          </p>
+        </div>
+
+        <div class="project-item item-right">
+          <img class="project-item__image" src="images/project2.png" alt="" />
+          <h3 class="project-item__heading">
+            <a class="border-animation" href="#">moshified</a>
+          </h3>
+          <p class="project-item__content">
+            Moshified is a fake, practice-purposed cloud hosting website. I
+            built the entire page from scratch just for practice.
+          </p>
         </div>
       </div>
     </section>

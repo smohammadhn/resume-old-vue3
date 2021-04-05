@@ -25,14 +25,16 @@ img {
 /* --------------- Typography --------------- */
 body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  font-size: 2.4rem;
+  font-size: 1.7rem;
   line-height: 1.5;
   color: var(--color-body);
   margin: 0;
+  background: #eee;
 }
 h1 {
   font-size: 7rem;
   color: var(--color-heading);
+  margin: 0;
 }
 h2 {
   font-size: 4rem;
@@ -44,6 +46,7 @@ h2,
 h3 {
   color: var(--color-sub-heading);
   line-height: 1.1;
+  margin: 0;
 }
 h2,
 h3 {
@@ -51,6 +54,13 @@ h3 {
 }
 p {
   margin-top: 0;
+}
+@media screen and (max-width: 767px) {
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+  }
 }
 
 /* --------------- Links --------------- */
@@ -115,25 +125,12 @@ a {
 /* --------------- Blocks --------------- */
 .block {
   max-width: 1210px;
-  margin: 0 auto 15rem;
+  margin: 0 auto 10rem;
 }
-.block-sckewed-left {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
-}
-/* --------------- Grids --------------- */
-.grid {
-  display: grid;
-  gap: 1rem;
-  padding: 1rem;
-}
-.grid--cols-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-.grid--cols-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-.grid--cols-auto {
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+@media screen and (min-width: 1024px) {
+  .block {
+    margin: 0 auto 15rem;
+  }
 }
 
 /* --------------- collapsibles --------------- */
@@ -147,7 +144,6 @@ a {
   max-height: 100vh;
   opacity: 1;
 }
-
 .navbar .collapsible__content {
   max-height: none;
   height: 0;
@@ -155,6 +151,86 @@ a {
 .collapsible-expanded.navbar .collapsible__content {
   height: 100vh;
   opacity: 1;
+}
+@media screen and (min-width: 768px) {
+  .navbar .collapsible__content,
+  .collapsible-expanded.navbar .collapsible__content {
+    height: auto;
+  }
+}
+/* --------------- Cards --------------- */
+.card {
+  width: 250px;
+  height: 300px;
+  box-shadow: 0 0 8px rgb(202, 202, 202);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+.card:hover .card-link-container {
+  height: 35px;
+}
+.card__heading {
+  margin: 1.5rem 0 2.5rem 0;
+  font-size: 2.7rem;
+  text-align: start;
+}
+.card__link {
+  font-size: 1.5rem;
+}
+.card-link-container {
+  transition: all 0.5s;
+  overflow: hidden;
+  height: 0;
+}
+.icon {
+  font-size: 5rem;
+}
+.card-primary {
+  background: var(--color-accent);
+}
+.card-primary .icon,
+.card-primary .card__link {
+  color: #fff;
+}
+.card-secondary {
+  background: #f6f6f8;
+}
+.card-secondary .icon,
+.card-secondary .card__link {
+  color: var(--color-accent);
+}
+/* --------------- Border Bottom Animation --------------- */
+.border-animation {
+  position: relative;
+}
+.border-animation::after {
+  content: " ";
+  width: 0;
+  height: 5px;
+  position: absolute;
+  background: var(--color-accent);
+  left: 0;
+  bottom: 0;
+  transition: all 0.4s;
+}
+.border-animation:hover::after {
+  width: 100%;
+}
+/* --------------- project item --------------- */
+.project-item__heading {
+  margin: 0.5rem 0;
+  text-align: start;
+}
+.project-item__heading h3 {
+  color: var(--color-heading);
+}
+.project-item__image {
+  border-radius: 20px;
+}
+.project-item .border-animation:after {
+  background: var(--color-sub-heading);
 }
 /* --------------- Navbar --------------- */
 .navbar {
@@ -191,19 +267,6 @@ a {
 .navbar .list-item a {
   color: var(--color-sub-heading);
 }
-.list-item::after {
-  content: " ";
-  width: 0;
-  height: 5px;
-  position: absolute;
-  background: var(--color-accent);
-  left: 0;
-  bottom: 0;
-  transition: all 0.4s;
-}
-.list-item:hover::after {
-  width: 100%;
-}
 @media screen and (min-width: 768px) {
   .navbar {
     padding: 1rem 5rem;
@@ -228,10 +291,13 @@ a {
   }
 }
 /* --------------- Hero Block --------------- */
+.hero-block {
+  max-width: 1440px;
+  margin: 0 auto 7rem;
+}
 .hero {
   max-width: 2560px;
   position: relative;
-  margin-bottom: 5rem;
 }
 .hero__image {
   width: 570px;
@@ -256,72 +322,58 @@ a {
   font-size: 11vw;
   line-height: 1;
   font-weight: 800;
+  margin: 2.5rem;
 }
 .hero__btn {
-  margin-top: 2rem;
+  margin-top: 3rem;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
   .hero__content {
     width: 50%;
-    padding: 5vw 2rem 2rem 15vw;
+    padding: 4rem 2rem 2rem 10rem;
     text-align: start;
   }
   .hero__content h3 {
-    font-size: 1.4vw;
+    font-size: 1.3rem;
   }
   .hero__content h1 {
-    font-size: 3.47vw;
+    font-size: 3rem;
     line-height: 1;
   }
   .hero__btn {
-    margin-top: 4vw;
+    margin-top: 1.3rem;
     text-align: start;
   }
 }
-/* --------------- Cards --------------- */
-.card {
-  width: 250px;
-  height: 300px;
-  box-shadow: 0 0 8px rgb(202, 202, 202);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 2rem;
+@media screen and (min-width: 1024px) {
+  .hero__content {
+    padding: 6rem 2rem 2rem 12rem;
+  }
+  .hero__content h1 {
+    font-size: 4rem;
+  }
+  .hero__content h3 {
+    font-size: 1.6rem;
+  }
+  .hero__btn {
+    margin-top: 2rem;
+  }
 }
-.card:hover .card-link-container {
-  height: 35px;
+@media screen and (min-width: 1440px) {
+  .hero__content {
+    padding: 10rem 2rem 2rem 16rem;
+  }
+  .hero__content h1 {
+    font-size: 6rem;
+  }
+  .hero__content h3 {
+    font-size: 2rem;
+  }
+  .hero__btn {
+    margin-top: 5rem;
+  }
 }
-.card__heading {
-  margin: 1.5rem 0 2.5rem 0;
-  font-size: 2.7rem;
-}
-.card__link {
-  font-size: 1.5rem;
-}
-.card-link-container {
-  transition: all 0.5s;
-  overflow: hidden;
-  height: 0;
-}
-.icon {
-  font-size: 5rem;
-}
-.card-primary {
-  background: var(--color-accent);
-}
-.card-primary .icon,
-.card-primary .card__link {
-  color: #fff;
-}
-.card-secondary {
-  background: #f6f6f8;
-}
-.card-secondary .icon,
-.card-secondary .card__link {
-  color: var(--color-accent);
-}
-
 /* --------------- Showcase block --------------- */
 .block-showcase {
   display: grid;
@@ -330,12 +382,11 @@ a {
     "card1"
     "card2"
     "card3"
-    "infinity"
-    "motto";
+    "motto"
+    "infinity";
   align-items: center;
   justify-items: center;
   gap: 4rem;
-  margin-top: 10rem;
 }
 .showcase__heading {
   grid-area: heading;
@@ -373,8 +424,9 @@ a {
     grid-template-areas:
       "infinity heading heading heading"
       "motto card1   card2   card3";
-    grid-template-columns: 100fr repeat(3, 300px);
+    grid-template-columns: 100fr repeat(3, 275px);
     gap: 0;
+    padding: 0 2rem;
   }
   .showcase__heading {
     padding: 1rem 1rem 8rem;
@@ -387,5 +439,31 @@ a {
   }
   .motto h3 {
     max-width: 1ch;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .block-showcase {
+    grid-template-columns: 100fr repeat(3, 330px);
+    padding: 0;
+  }
+}
+/* --------------- projects block --------------- */
+.project__heading {
+  color: var(--color-heading);
+  margin-bottom: 4rem;
+  padding: 0 1rem;
+}
+.project-row {
+  display: grid;
+  padding: 0 4rem;
+  gap: 5rem;
+}
+@media screen and (min-width: 768px) {
+  .project-row {
+    grid-template-columns: 1fr 1fr;
+    height: 90rem;
+  }
+  .item-right {
+    align-self: flex-end;
   }
 }
