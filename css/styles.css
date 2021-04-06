@@ -55,6 +55,9 @@ h3 {
 p {
   margin-top: 0;
 }
+a {
+  color: inherit;
+}
 @media screen and (max-width: 767px) {
   h1,
   h2,
@@ -458,7 +461,7 @@ a {
   padding: 0 4rem;
   gap: 5rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .project-row {
     grid-template-columns: 1fr 1fr;
     height: 90rem;
@@ -491,5 +494,97 @@ a {
   height: fit-content;
 }
 .form-container {
+  padding: 0 1rem;
+}
+/* --------------- social media item --------------- */
+.social-media-item {
+  width: 100%;
+  padding: 3rem 0 0 1.5rem;
+}
+.social-media__icon {
+  font-size: 3.5rem;
+  position: relative;
+  color: white;
+  transform: translate(-4px, -2px);
+}
+.box1 {
+  background: inherit;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+}
+.box2 {
+  justify-content: center;
+  position: relative;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: white;
+  /* padding-left: 2rem; */
+}
+.box1,
+.box2 {
+  display: flex;
+  align-items: center;
+  border: 2px white solid;
+  box-shadow: 0 0 2px 2px #ccc;
+}
+.blue {
+  background: dodgerblue;
+}
+.green {
+  background: green;
+}
+.red {
+  background: darkred;
+}
+.purple {
+  background: purple;
+}
+/* --------------- social media section --------------- */
+.social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.social-media__text {
+  margin: 2rem 0;
+}
+.social-media-item__container {
+  width: 300px;
+}
+.social-media__link {
+  transition: 0.3s ease-out;
+}
+.box2:hover .social-media__link {
+  transform: scale(1.1);
+}
+.my-gmail {
+  line-height: 0.5;
+  text-align: center;
+}
+/* --------------- Footer section --------------- */
+.footer-container {
+  display: grid;
   padding: 1rem;
+  gap: 6rem;
+}
+.footer {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 1024px) {
+  .footer-container {
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    gap: 6rem;
+  }
+  .social-media {
+    order: -1;
+    align-items: flex-start;
+  }
 }

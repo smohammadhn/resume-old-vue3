@@ -150,7 +150,103 @@
         </div>
       </div>
     </section>
-    
+
+    <!-- footer section -->
+    <section class="block footer">
+      <div class="footer-container">
+        <!-- contact us form section -->
+        <section class="form-container">
+          <h2 class="form__heading">Don't be shy, Say Hello!</h2>
+          <form
+            class="contactMe-form"
+            action="https://formspree.io/f/mzbybrnk"
+            method="POST"
+          >
+            <input type="text" name="_gotcha" style="display: none" />
+            <input
+              class="form-input"
+              type="text"
+              placeholder="Name (required)"
+              name="name"
+              minlength="3"
+              maxlength="50"
+              required
+            />
+            <input
+              class="form-input"
+              type="email"
+              placeholder="Email (Optional)"
+              name="email"
+              minlength="10"
+              maxlength="60"
+            />
+            <input
+              class="form-input"
+              type="tel"
+              placeholder="Phone number (Optional)"
+              name="tel"
+            />
+            <textarea
+              class="form-input txt-area"
+              name="message"
+              id="message"
+              cols="30"
+              rows="5"
+              placeholder="Say something to me here! :)"
+              maxlength="300"
+              required
+            ></textarea>
+            <button class="btn btn-primary" type="submit">Send</button>
+          </form>
+        </section>
+        <!-- social media section -->
+        <section class="social-media">
+          <h2 class="social-media__heading">Let's be sociable</h2>
+          <p class="social-media__text">
+            If you prefer social media to connect, <br />
+            I'm available at following:
+          </p>
+
+          <div class="social-media-item__container">
+            <div class="social-media-item">
+              <div class="box2 purple">
+                <div class="box1">
+                  <i class="fab fa-instagram social-media__icon"></i>
+                </div>
+                <a href="#" class="social-media__link">@smohammadhn</a>
+              </div>
+            </div>
+            <div class="social-media-item">
+              <div class="box2 blue">
+                <div class="box1">
+                  <i class="fab fa-telegram-plane social-media__icon"></i>
+                </div>
+                <a href="#" class="social-media__link">@smohammadhn</a>
+              </div>
+            </div>
+            <div class="social-media-item">
+              <div class="box2 green">
+                <div class="box1">
+                  <i class="fab fa-whatsapp social-media__icon"></i>
+                </div>
+                <a href="#" class="social-media__link">@smohammadhn</a>
+              </div>
+            </div>
+            <div class="social-media-item">
+              <div class="box2 red">
+                <div class="box1">
+                  <i class="fab fa-google social-media__icon"></i>
+                </div>
+                <a href="#" class="social-media__link my-gmail">
+                  <div style="font-size: 1.6rem">smohammadhnd</div
+                  ><span style="font-size: 1rem">@gmail.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
 
     <!-- javascript codes -->
     <script src="/js/main.js"></script>
