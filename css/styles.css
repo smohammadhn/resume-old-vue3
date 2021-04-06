@@ -292,7 +292,7 @@ a {
 }
 /* --------------- Hero Block --------------- */
 .hero-block {
-  max-width: 1440px;
+  max-width: 1536px;
   margin: 0 auto 7rem;
 }
 .hero {
@@ -322,7 +322,7 @@ a {
   font-size: 11vw;
   line-height: 1;
   font-weight: 800;
-  margin: 2.5rem;
+  margin: 2.5rem 0;
 }
 .hero__btn {
   margin-top: 3rem;
