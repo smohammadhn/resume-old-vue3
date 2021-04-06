@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>S.Mohammad Hosseininejad - My Portfolio</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <title>S.Mohammad Hosseininejad - My Portfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script
       src="https://kit.fontawesome.com/a61a469824.js"
       crossorigin="anonymous"
@@ -59,9 +60,13 @@
             media="(min-width: 768px)"
             srcset="images/Banner.webp"
           />
-          <img src="images/Banner.png" alt="Hero section Banner" />
+          <img src="images/Banner.png" alt="smohammadhn Banner" />
         </picture>
-        <div class="hero__content">
+        <div
+          class="hero__content"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           <h3>Hi there, I'm</h3>
           <h1>
             S.Mohammad <br />
@@ -78,24 +83,24 @@
     <!-- showcase block -->
     <section class="block">
       <div class="block-showcase">
-        <h2 class="showcase__heading">
+        <h2 class="showcase__heading" data-aos="fade-up">
           A front-end developer fueled by enthusiasm.
         </h2>
-        <div class="card card-primary showcase__card1">
+        <div class="card card-primary showcase__card1" data-aos="zoom-out">
           <i class="fab fa-react icon"></i>
           <h3 class="card__heading">React developer</h3>
           <div class="card-link-container">
             <a href="#" class="link-arrow card__link">Discover More</a>
           </div>
         </div>
-        <div class="card card-secondary showcase__card2">
+        <div class="card card-secondary showcase__card2" data-aos="zoom-out">
           <i class="fas fa-mobile-alt icon"></i>
           <h3 class="card__heading">Responsive design</h3>
           <div class="card-link-container">
             <a href="#" class="link-arrow card__link">Discover More</a>
           </div>
         </div>
-        <div class="card card-secondary showcase__card3">
+        <div class="card card-secondary showcase__card3" data-aos="zoom-out">
           <i class="fab fa-buromobelexperte icon"></i>
           <h3 class="card__heading">UI / web designer</h3>
           <div class="card-link-container">
@@ -110,7 +115,7 @@
     </section>
     <!-- projects block -->
     <section id="projects" class="block">
-      <h2 class="project__heading">
+      <h2 class="project__heading" data-aos="fade-up">
         projects I did, <br />
         and businesses I helped.
       </h2>
@@ -122,6 +127,7 @@
               class="project-item__image"
               src="images/project1.png"
               alt="hivasls landing page"
+              data-aos="zoom-out"
             />
           </picture>
           <h3 class="project-item__heading">
@@ -140,6 +146,7 @@
               class="project-item__image"
               src="images/project2.png"
               alt="Moshified landing page"
+              data-aos="zoom-out"
             />
           </picture>
           <h3 class="project-item__heading">
@@ -163,6 +170,7 @@
             class="contactMe-form"
             action="https://formspree.io/f/mzbybrnk"
             method="POST"
+            data-aos="zoom-out"
           >
             <input type="text" name="_gotcha" style="display: none" />
             <input
@@ -210,7 +218,7 @@
           </p>
 
           <div class="social-media-item__container">
-            <div class="social-media-item">
+            <div class="social-media-item" data-aos="fade-right">
               <div class="box2 purple">
                 <div class="box1">
                   <i class="fab fa-instagram social-media__icon"></i>
@@ -222,7 +230,11 @@
                 >
               </div>
             </div>
-            <div class="social-media-item">
+            <div
+              class="social-media-item"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
               <div class="box2 blue">
                 <div class="box1">
                   <i class="fab fa-telegram-plane social-media__icon"></i>
@@ -232,7 +244,11 @@
                 >
               </div>
             </div>
-            <div class="social-media-item">
+            <div
+              class="social-media-item"
+              data-aos="fade-right"
+              data-aos-delay="400"
+            >
               <div class="box2 green">
                 <div class="box1">
                   <i class="fab fa-whatsapp social-media__icon"></i>
@@ -242,7 +258,11 @@
                 >
               </div>
             </div>
-            <div class="social-media-item">
+            <div
+              class="social-media-item"
+              data-aos="fade-right"
+              data-aos-delay="600"
+            >
               <div class="box2 red">
                 <div class="box1">
                   <i class="fab fa-google social-media__icon"></i>

@@ -130,12 +130,6 @@ a {
   max-width: 1210px;
   margin: 0 auto 10rem;
 }
-@media screen and (min-width: 1024px) {
-  .block {
-    margin: 0 auto 15rem;
-  }
-}
-
 /* --------------- collapsibles --------------- */
 .collapsible__content {
   max-height: 0;
@@ -576,7 +570,7 @@ a {
   gap: 6rem;
 }
 .footer {
-  margin-bottom: 0;
+  margin-bottom: 6rem;
 }
 @media screen and (min-width: 1024px) {
   .footer-container {
