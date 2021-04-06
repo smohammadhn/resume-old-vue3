@@ -194,7 +194,8 @@ a {
   background: var(--color-accent);
 }
 .card-primary .icon,
-.card-primary .card__link {
+.card-primary .card__link,
+.card-primary .card__heading {
   color: #fff;
 }
 .card-secondary {

@@ -22,19 +22,23 @@
       <a class="navbar__logo" href="https://smohammadhn.com/">
         <picture>
           <source type="image/webp" srcset="images/logo.webp" />
-          <img type="image/png" src="images/logo.png" alt="smohammadhn logo" />
+          <img src="images/logo.png" alt="smohammadhn logo" />
         </picture>
       </a>
       <img class="navbar__menu" src="images/menu.svg" alt="" />
       <ul class="list collapsible__content">
-        <li class="list-item border-animation"><a href="#">Contact me</a></li>
+        <li class="list-item border-animation">
+          <a href="#footer">Contact me</a>
+        </li>
         <li class="list-item border-animation"><a href="#">My Resume</a></li>
-        <li class="list-item border-animation"><a href="#">My projects</a></li>
+        <li class="list-item border-animation">
+          <a href="#projects">My projects</a>
+        </li>
       </ul>
     </nav>
     <!-- Hero BLock -->
     <section class="hero-block">
-      <section class="hero">
+      <div class="hero">
         <picture>
           <source
             type="image/webp"
@@ -51,11 +55,7 @@
             media="(min-width: 768px)"
             srcset="images/Banner.webp"
           />
-          <img
-            type="image/webp"
-            src="images/Banner.png"
-            alt="Hero section Banner"
-          />
+          <img src="images/Banner.png" alt="Hero section Banner" />
         </picture>
         <div class="hero__content">
           <h3>Hi there, I'm</h3>
@@ -68,7 +68,7 @@
             <a href="#" class="btn btn-primary">Contact me</a>
           </div>
         </div>
-      </section>
+      </div>
     </section>
 
     <!-- showcase block -->
@@ -105,7 +105,7 @@
       </div>
     </section>
     <!-- projects block -->
-    <section class="block">
+    <section id="projects" class="block">
       <h2 class="project__heading">
         projects I did, <br />
         and businesses I helped.
@@ -116,7 +116,6 @@
             <source type="image/webp" srcset="images/project1.webp" />
             <img
               class="project-item__image"
-              type="image/png"
               src="images/project1.png"
               alt="hivasls landing page"
             />
@@ -135,7 +134,6 @@
             <source type="image/webp" srcset="images/project2.webp" />
             <img
               class="project-item__image"
-              type="image/png"
               src="images/project2.png"
               alt="Moshified landing page"
             />
@@ -152,7 +150,7 @@
     </section>
 
     <!-- footer section -->
-    <section class="block footer">
+    <footer id="footer" class="block footer">
       <div class="footer-container">
         <!-- contact us form section -->
         <section class="form-container">
@@ -166,7 +164,7 @@
             <input
               class="form-input"
               type="text"
-              placeholder="Name (required)"
+              placeholder="Name (Required)"
               name="name"
               minlength="3"
               maxlength="50"
@@ -213,7 +211,11 @@
                 <div class="box1">
                   <i class="fab fa-instagram social-media__icon"></i>
                 </div>
-                <a href="#" class="social-media__link">@smohammadhn</a>
+                <a
+                  href="https://www.instagram.com/smohammadhn/"
+                  class="social-media__link"
+                  >@smohammadhn</a
+                >
               </div>
             </div>
             <div class="social-media-item">
@@ -221,7 +223,9 @@
                 <div class="box1">
                   <i class="fab fa-telegram-plane social-media__icon"></i>
                 </div>
-                <a href="#" class="social-media__link">@smohammadhn</a>
+                <a href="https://t.me/smohammadhn" class="social-media__link"
+                  >@smohammadhn</a
+                >
               </div>
             </div>
             <div class="social-media-item">
@@ -229,7 +233,9 @@
                 <div class="box1">
                   <i class="fab fa-whatsapp social-media__icon"></i>
                 </div>
-                <a href="#" class="social-media__link">@smohammadhn</a>
+                <a href="tel:+989021211074" class="social-media__link"
+                  >+989021211074</a
+                >
               </div>
             </div>
             <div class="social-media-item">
@@ -237,16 +243,19 @@
                 <div class="box1">
                   <i class="fab fa-google social-media__icon"></i>
                 </div>
-                <a href="#" class="social-media__link my-gmail">
-                  <div style="font-size: 1.6rem">smohammadhnd</div
-                  ><span style="font-size: 1rem">@gmail.com</span>
+                <a
+                  href="mailto:smohammadhnd@gmail.com"
+                  class="social-media__link my-gmail"
+                >
+                  <div style="font-size: 1.6rem">smohammadhnd</div>
+                  <span style="font-size: 1rem">@gmail.com</span>
                 </a>
               </div>
             </div>
           </div>
         </section>
       </div>
-    </section>
+    </footer>
 
     <!-- javascript codes -->
     <script src="/js/main.js"></script>
