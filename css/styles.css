@@ -466,4 +466,30 @@ a {
   .item-right {
     align-self: flex-end;
   }
+  .project__heading {
+    padding: 0 4rem;
+  }
+}
+/* --------------- Forms --------------- */
+.form-input {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 98%;
+  height: 5rem;
+  padding: 1rem;
+  margin: 2rem 0;
+  transition: all 0.4s;
+}
+.form-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 5px 1px var(--color-accent);
+  outline: none;
+}
+.form-input.txt-area {
+  resize: none;
+  height: fit-content;
+}
+.form-container {
+  padding: 1rem;
 }
