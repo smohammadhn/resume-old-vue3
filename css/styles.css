@@ -2,11 +2,11 @@
 
 /* --------------- General configuration --------------- */
 :root {
-  --color-heading: #120845;
-  --color-sub-heading: #4b4567;
-  --color-links: #7562df;
-  --color-paragraph: #000;
-  --color-accent: #7562e0;
+  --color-background: #def2f1;
+  --color-accent: #2b7a78;
+  --color-text: #17252a;
+  --color-white: #feffff;
+  --color-links: #2b7a78;
   --btn-border-radius: 4px;
 }
 *,
@@ -26,9 +26,8 @@ body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 1.7rem;
   line-height: 1.5;
-  color: var(--color-body);
   margin: 0;
-  background: #eee;
+  background: var(--color-background);
 }
 h1 {
   font-size: 7rem;
@@ -53,6 +52,8 @@ h3 {
 }
 p {
   margin-top: 0;
+  color: var(--color-paragraph);
+  text-shadow: 0 0 2px var(--color-accent);
 }
 a {
   color: inherit;
@@ -68,9 +69,9 @@ a {
 /* --------------- Links --------------- */
 a {
   text-decoration: none;
+  color: var(--color-links);
 }
 .link-arrow {
-  color: var(--color-links);
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: bold;
@@ -572,6 +573,7 @@ a {
 }
 .social-media__link {
   transition: 0.3s ease-out;
+  color: var(--color-white);
 }
 .box2:hover .social-media__link {
   transform: scale(1.1);
