@@ -205,7 +205,7 @@ a {
 .border-animation::after {
   content: " ";
   width: 0;
-  height: 5px;
+  height: 4px;
   position: absolute;
   background: var(--color-accent);
   left: 0;
@@ -257,7 +257,7 @@ a {
 }
 .navbar .list-item {
   font-size: 4vw;
-  border-bottom: 1px solid var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
   padding: 1rem;
   margin: 0 3rem;
   font-weight: 600;
