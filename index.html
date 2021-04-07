@@ -23,24 +23,23 @@
   </head>
   <body>
     <!-- Navigation bar -->
-    <nav class="navbar collapsible">
-      <a class="navbar__logo" href="https://smohammadhn.com/">
-        <picture>
-          <source type="image/webp" srcset="images/logo.webp" />
+    <div class="block block-navbar">
+      <nav class="navbar collapsible">
+        <a class="navbar__logo" href="https://smohammadhn.com/">
           <img src="images/logo.png" alt="smohammadhn logo" />
-        </picture>
-      </a>
-      <img class="navbar__menu" src="images/menu.svg" alt="" />
-      <ul class="list collapsible__content">
-        <li class="list-item border-animation">
-          <a href="#footer">Contact me</a>
-        </li>
-        <li class="list-item border-animation"><a href="#">My Resume</a></li>
-        <li class="list-item border-animation">
-          <a href="#projects">My projects</a>
-        </li>
-      </ul>
-    </nav>
+        </a>
+        <img class="navbar__menu" src="images/menu.svg" alt="" />
+        <ul class="list collapsible__content">
+          <li class="list-item border-animation">
+            <a href="#footer">Contact me</a>
+          </li>
+          <li class="list-item border-animation"><a href="#">My Resume</a></li>
+          <li class="list-item border-animation">
+            <a href="#projects">My projects</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <!-- Hero BLock -->
     <section class="hero-block">
       <div class="hero">
@@ -170,7 +169,6 @@
             class="contactMe-form"
             action="https://formspree.io/f/mzbybrnk"
             method="POST"
-            data-aos="zoom-out"
           >
             <input type="text" name="_gotcha" style="display: none" />
             <input

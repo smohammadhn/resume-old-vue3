@@ -8,7 +8,6 @@
   --color-paragraph: #000;
   --color-accent: #7562e0;
   --btn-border-radius: 4px;
-  --logo-size: 60px;
 }
 *,
 *::before,
@@ -235,20 +234,25 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 0;
   padding: 2rem;
 }
+.block-navbar {
+  margin-bottom: 0;
+}
 .navbar__logo {
-  width: var(--logo-size);
-  height: var(--logo-size);
+  width: 150px;
 }
 .navbar__menu {
   --menu-size: 32px;
   width: var(--menu-size);
   height: var(--menu-size);
-  fill: var(--color-accent);
-  color: #000;
+  align-self: center;
+  opacity: 0.6;
+}
+.collapsible-expanded .navbar__menu {
+  opacity: 1;
 }
 .navbar .list {
   width: 100%;
@@ -267,7 +271,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .navbar {
-    padding: 1rem 5rem;
+    padding: 2rem 1rem 0;
   }
   .navbar__menu {
     display: none;
@@ -286,6 +290,19 @@ a {
     border-bottom: none;
     font-size: 1vw;
     margin: 0 1rem;
+  }
+  .navbar__logo {
+    width: 120px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navbar__logo {
+    width: 150px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .navbar__logo {
+    width: 190px;
   }
 }
 /* --------------- Hero Block --------------- */
