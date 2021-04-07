@@ -31,7 +31,6 @@ body {
 }
 h1 {
   font-size: 7rem;
-  color: var(--color-heading);
   margin: 0;
 }
 h2 {
@@ -42,16 +41,16 @@ h3 {
 }
 h2,
 h3 {
-  color: var(--color-sub-heading);
   line-height: 1.1;
   margin: 0;
+  color: var(--color-text);
 }
 h2,
 h3 {
   text-transform: capitalize;
 }
 p {
-  margin-top: 0;
+  margin: 0;
   color: var(--color-paragraph);
   text-shadow: 0 0 2px var(--color-accent);
 }
@@ -69,7 +68,7 @@ a {
 /* --------------- Links --------------- */
 a {
   text-decoration: none;
-  color: var(--color-links);
+  color: var(--color-text);
 }
 .link-arrow {
   text-transform: uppercase;
@@ -221,14 +220,11 @@ a {
   margin: 0.5rem 0;
   text-align: start;
 }
-.project-item__heading h3 {
-  color: var(--color-heading);
-}
 .project-item__image {
   border-radius: 20px;
 }
 .project-item .border-animation:after {
-  background: var(--color-sub-heading);
+  background: var(--color-text);
 }
 /* --------------- Navbar --------------- */
 .navbar {
@@ -406,7 +402,6 @@ a {
 }
 .showcase__heading {
   grid-area: heading;
-  color: var(--color-heading);
   font-size: 3.5rem;
   text-align: center;
   padding: 1rem;
@@ -465,7 +460,6 @@ a {
 }
 /* --------------- projects block --------------- */
 .project__heading {
-  color: var(--color-heading);
   margin-bottom: 4rem;
   padding: 0 1rem;
 }
@@ -588,9 +582,6 @@ a {
   padding: 1rem;
   gap: 6rem;
 }
-.footer {
-  margin-bottom: 6rem;
-}
 @media screen and (min-width: 1024px) {
   .footer-container {
     display: grid;
@@ -601,4 +592,14 @@ a {
     order: -1;
     align-items: flex-start;
   }
+}
+.copyright-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  background: var(--color-accent);
+}
+.copyright-section a {
+  color: var(--color-white);
 }
