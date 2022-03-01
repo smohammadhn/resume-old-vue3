@@ -6,11 +6,11 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  font-family: lato, Arial, sans-serif;
+  font-family: 'lato', Arial, sans-serif;
 }
 
 body {
-  font-family: lato, Arial, sans-serif;
+  font-family: 'lato', Arial, sans-serif;
 }
 
 h1,h2,h3,h4,p {
@@ -25,18 +25,18 @@ ul, li {
 
 a {
   color: #002c00;
-  font-family: lato, Arial, sans-serif;
+  font-family: 'lato', Arial, sans-serif;
 }
 
 @font-face {
   font-family: lato;
-  src: local("Merienda"), url(./assets/fonts/Lato/Lato-regular.ttf) format("truetype");
+  src: local("lato"), url('static/fonts/Lato/Lato-regular.ttf'); format("truetype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: lato;
-  src: local("Merienda"), url(./assets/fonts/Lato/Lato-bold.ttf) format("truetype");
+  src: local("lato"), url('static/fonts/Lato/Lato-bold.ttf') format("truetype");
   font-weight: bold;
 }
 
