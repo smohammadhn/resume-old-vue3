@@ -1,5 +1,14 @@
 <template>
   <div class="resume">
+    <!-- head -->
+    <Html lang="en-US">
+      <Head>
+        <Title>S.Mohammad Hosseininejad</Title>
+        <Meta name="description" content="My resume" />
+      </Head>
+    </Html>
+
+    <!-- body -->
     <div class="resume-left-column">
       <!-- image: only on desktop -->
       <div class="resume-left__image">
@@ -272,12 +281,6 @@ import ResumeInformationCard from '~/components/cards/ResumeInformationCard'
 <script>
 export default {
   layout: 'empty',
-
-  head() {
-    return {
-      title: 'S.Mohammad Hosseininejad',
-    }
-  },
 }
 </script>
 
