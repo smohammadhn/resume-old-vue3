@@ -30,13 +30,13 @@ a {
 
 @font-face {
   font-family: lato;
-  src: local("lato"), url('static/fonts/Lato/Lato-regular.ttf') format("truetype");
+  src: local("lato"), url('/fonts/Lato/Lato-regular.ttf') format("truetype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: lato;
-  src: local("lato"), url('static/fonts/Lato/Lato-bold.ttf') format("truetype");
+  src: local("lato"), url('/fonts/Lato/Lato-bold.ttf') format("truetype");
   font-weight: bold;
 }
 
