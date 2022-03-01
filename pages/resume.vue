@@ -1,9 +1,13 @@
 <template>
   <div class="resume">
     <div class="resume-left-column">
-      <!-- image -->
+      <!-- image: only on desktop -->
       <div class="resume-left__image">
-        <img src="~/assets/images/1.png" alt="avatar" />
+        <img
+          class="hidden-on-mobile"
+          src="~/assets/images/1.png"
+          alt="avatar"
+        />
       </div>
       <!-- contact -->
       <div class="resume-left__box">
@@ -107,6 +111,11 @@
       </div>
     </div>
     <div class="resume-right-column">
+      <!-- image: only on mobile -->
+      <div class="resume-left__image hidden-on-desktop">
+        <img src="~/assets/images/1.png" alt="avatar" />
+      </div>
+
       <!-- main title -->
       <h1>
         S.Mohammad
@@ -137,7 +146,7 @@
             programming problems on "quera.ir" to enforce my mind to find
             algorithms more efficiently. At last, by the end of 2020, I had
             enough knowledge to enter front-end web development field and my
-            professional career started since then.
+            professional career started since then...
           </div>
         </template>
       </ResumeInformationCard>
@@ -203,7 +212,7 @@
               <br />
               "msmarket" which was the one that played a bigger role in, was for
               managing stockholders' information of a particular company. The
-              atmosphere was fun and I worked with great people there!
+              atmosphere was fun and I worked with awesome people there!
             </div>
           </div>
 
@@ -223,8 +232,8 @@
               </div>
             </div>
             <div class="resume-right__info-card__description">
-              Working on 5 repositories including two websites and three admin
-              panels.
+              Working on five repositories including two websites and three
+              admin panels.
               <br />
               <a
                 href="https://bazarkhodro.ir/"
@@ -233,8 +242,9 @@
               >
                 "www.bazarkhodro.ir"
               </a>
-              : a feature-rich website enabling users to buy/sell cars in the
-              country
+              : A feature-rich website enabling users to buy/sell cars in the
+              country.
+              <br />
               <br />
               <a
                 href="https://rentifa.com/"
@@ -243,7 +253,7 @@
               >
                 "www.rentifa.com"
               </a>
-              : a useful website for users to rent cars in specific cities of
+              : A useful website for users to rent cars in specific cities of
               the country. Also, provided admin panels for agents to be able to
               put their vehicles on the website for renting.
             </div>
@@ -273,11 +283,12 @@ export default {
 
 <style lang="scss" scoped>
 @import 'assets/styles/variables';
+$breakpoint-layout-shift: 1050px;
 
 h1 {
-  font-size: 6rem;
+  font-size: min(10vw, 6rem);
   margin-bottom: 2rem;
-  margin-top: 4rem;
+  margin-top: min(3vw, 4rem);
   text-transform: uppercase;
   letter-spacing: 3px;
 }
@@ -290,6 +301,18 @@ h3 {
   font-size: 1.4rem;
 }
 
+@media screen and (max-width: $breakpoint-layout-shift) {
+  .hidden-on-mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: $breakpoint-layout-shift) {
+  .hidden-on-desktop {
+    display: none !important;
+  }
+}
+
 .resume {
   margin-inline: auto;
   border-radius: 20px;
@@ -299,27 +322,36 @@ h3 {
   grid-template-columns: 1fr 2fr;
   color: $color-green-dark;
 
+  @media screen and (max-width: $breakpoint-layout-shift) {
+    grid-template-columns: 1fr;
+  }
+
   &-left {
     &-column {
       background: $color-background;
-      padding-inline: 3rem;
+      padding-inline: min(7vw, 3rem);
     }
 
     &__image {
       display: grid;
       place-items: center;
-      padding-block: 5.5rem;
+      padding-block: min(10vw, 5.5rem);
 
       img {
         width: 200px;
         height: 200px;
         border: 1px solid $color-green-dark;
         border-radius: 50%;
+
+        @media screen and (max-width: $breakpoint-layout-shift) {
+          width: max(35vw, 200px);
+          height: max(35vw, 200px);
+        }
       }
     }
 
     &__box {
-      margin-bottom: 4rem;
+      margin-bottom: 7rem;
       color: $color-green-dark;
 
       &-title {
@@ -393,8 +425,12 @@ h3 {
 
   &-right {
     &-column {
-      padding-inline: 3rem;
+      padding-inline: min(5vw, 3rem);
       background: white;
+
+      @media screen and (max-width: $breakpoint-layout-shift) {
+        grid-row: 1;
+      }
     }
 
     &__subheader {
@@ -406,6 +442,8 @@ h3 {
     &__profile {
       font-size: $font-body;
       line-height: 26px;
+      text-align: justify;
+      text-justify: inter-word;
     }
 
     &__info-card {
@@ -414,19 +452,33 @@ h3 {
       .flex-space-between {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 0.25rem;
+        margin-bottom: 0.5rem;
+
+        @media screen and (max-width: 550px) {
+          flex-direction: column;
+          text-align: center;
+          margin-block: 1.5rem;
+        }
       }
 
       &__location {
         font-size: $font-body;
       }
+
       &__date {
         font-size: $font-body;
         text-align: right;
+
+        @media screen and (max-width: $breakpoint-layout-shift) {
+          text-align: center;
+        }
       }
+
       &__description {
         font-size: $font-body;
         line-height: 25px;
+        text-align: justify;
+        text-justify: inter-word;
       }
     }
   }

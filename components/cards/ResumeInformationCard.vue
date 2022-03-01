@@ -36,8 +36,8 @@ h2 {
 
 .ric {
   border-left: 3px solid $color-green-dark;
-  padding-left: 4rem;
-  margin-left: 1rem;
+  padding-left: min(6.5vw, 4rem);
+  margin-left: min(1vw, 1rem);
   margin-bottom: 5rem;
   position: relative;
 

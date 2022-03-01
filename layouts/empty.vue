@@ -8,7 +8,7 @@
 
 <style scoped>
 .container {
-  padding-block: 1rem;
+  padding-block: min(1vw, 1rem);
   background: #eee;
 }
 </style>
