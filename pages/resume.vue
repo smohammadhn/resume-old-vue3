@@ -31,7 +31,11 @@
             </svg>
           </div>
           <h3>linkedin</h3>
-          <p>@linkedin</p>
+          <a
+            href="https://www.linkedin.com/in/seyed-mohammad-hosseininejad-1704a6233/"
+          >
+            linkedin profile
+          </a>
         </div>
         <!-- contact box: 2 -->
         <div class="contact-box">
