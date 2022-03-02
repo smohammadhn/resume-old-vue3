@@ -14,8 +14,8 @@
       <div class="resume-left__image">
         <img
           class="hidden-on-mobile"
-          src="~/assets/images/1.png"
-          alt="avatar"
+          src="~/public/profile-square@500px.jpg"
+          alt="profile picture"
         />
       </div>
       <!-- contact -->
@@ -146,7 +146,7 @@
     <div class="resume-right-column">
       <!-- image: only on mobile -->
       <div class="resume-left__image hidden-on-desktop">
-        <img src="~/assets/images/1.png" alt="avatar" />
+        <img src="~/public/profile-square@500px.jpg" alt="profile picture" />
       </div>
 
       <!-- main title -->
@@ -408,11 +408,12 @@ h3 {
       display: grid;
       place-items: center;
       padding-block: min(10vw, 5.5rem);
+      background: $color-background;
+      border-radius: 10px;
 
       img {
         width: 200px;
         height: 200px;
-        border: 1px solid $color-green-dark;
         border-radius: 50%;
 
         @media screen and (max-width: $breakpoint-layout-shift) {
