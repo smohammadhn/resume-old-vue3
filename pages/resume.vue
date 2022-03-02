@@ -92,23 +92,23 @@
         <h2 class="resume-left__box-title">expertise</h2>
         <div class="expertise-box">
           <h3>html5 / css3</h3>
-          <LinearRange progress="90%" />
+          <div>2.5 yr.</div>
         </div>
         <div class="expertise-box">
           <h3>javascript / es6</h3>
-          <LinearRange progress="85%" />
+          <div>2 yr.</div>
         </div>
         <div class="expertise-box">
           <h3>vue2 / nuxt2</h3>
-          <LinearRange progress="75%" />
+          <div>1 yr.</div>
         </div>
         <div class="expertise-box">
           <h3>git / npm</h3>
-          <LinearRange progress="90%" />
+          <div>2.5 yr.</div>
         </div>
         <div class="expertise-box">
           <h3>vue3 / nuxt3 / typescript</h3>
-          <LinearRange progress="25%" />
+          <div>3 mo.</div>
         </div>
       </div>
 
@@ -343,7 +343,6 @@
 </template>
 
 <script setup>
-import LinearRange from '~/components/linearRange'
 import ResumeInformationCard from '~/components/cards/ResumeInformationCard'
 </script>
 
@@ -424,7 +423,7 @@ h3 {
     }
 
     &__box {
-      margin-bottom: 7rem;
+      margin-bottom: 9rem;
       color: $color-green-dark;
 
       &-title {
@@ -471,12 +470,26 @@ h3 {
       }
 
       .expertise-box {
-        margin: 2rem;
-        margin-left: 0;
+        margin-block: 1.25rem;
         display: flex;
-        flex-direction: column;
-        row-gap: 0.5rem;
-        text-transform: uppercase;
+        justify-content: space-between;
+        place-items: center;
+
+        h3 {
+          text-transform: uppercase;
+        }
+
+        div {
+          height: 35px;
+          width: 70px;
+          background: $color-green-dark;
+          color: white;
+          font-weight: bold;
+          border-radius: 5px;
+          font-size: $font-body;
+          display: grid;
+          place-items: center;
+        }
       }
 
       .pre-skills-box {
