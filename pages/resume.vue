@@ -14,7 +14,7 @@
       <div class="resume-left__image">
         <img
           class="hidden-on-mobile"
-          src="~/public/profile-square@500px.jpg"
+          src="~/assets/images/profile-square@500px.jpg"
           alt="profile picture"
         />
       </div>
@@ -33,6 +33,7 @@
           <h3>linkedin</h3>
           <a
             href="https://www.linkedin.com/in/seyed-mohammad-hosseininejad-1704a6233/"
+            target="_blank"
           >
             linkedin profile
           </a>
@@ -150,7 +151,10 @@
     <div class="resume-right-column">
       <!-- image: only on mobile -->
       <div class="resume-left__image hidden-on-desktop">
-        <img src="~/public/profile-square@500px.jpg" alt="profile picture" />
+        <img
+          src="~/assets/images/profile-square@500px.jpg"
+          alt="profile picture"
+        />
       </div>
 
       <!-- main title -->
