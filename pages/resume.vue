@@ -26,14 +26,28 @@
           <div>
             <svg viewBox="0 0 24 24">
               <path
-                d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"
+                d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"
               />
             </svg>
           </div>
-          <h3>address</h3>
-          <p>No. 210, Mosalla Street, Shahrood, Semnan</p>
+          <h3>linkedin</h3>
+          <p>@linkedin</p>
         </div>
         <!-- contact box: 2 -->
+        <div class="contact-box">
+          <div>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"
+              />
+            </svg>
+          </div>
+          <h3>github</h3>
+          <a href="https://github.com/smohammadhn" target="_blank">
+            github.com/smohammadhn
+          </a>
+        </div>
+        <!-- contact box: 3 -->
         <div class="contact-box">
           <div>
             <svg viewBox="0 0 24 24">
@@ -43,9 +57,11 @@
             </svg>
           </div>
           <h3>website</h3>
-          <p>www.smohammadhn.com</p>
+          <a href="https://smohammadhn.com/" target="_blank">
+            smohammadhn.com
+          </a>
         </div>
-        <!-- contact box: 3 -->
+        <!-- contact box: 4 -->
         <div class="contact-box">
           <div>
             <svg viewBox="0 0 24 24">
@@ -55,9 +71,9 @@
             </svg>
           </div>
           <h3>email</h3>
-          <p>smohammadhnd@gmail.com</p>
+          <a href="mailto:smohammadhnd@gmail.com">smohammadhnd@gmail.com</a>
         </div>
-        <!-- contact box: 4 -->
+        <!-- contact box: 5 -->
         <div class="contact-box">
           <div>
             <svg viewBox="0 0 24 24">
@@ -67,7 +83,7 @@
             </svg>
           </div>
           <h3>phone</h3>
-          <p>(+98)9021211074</p>
+          <a href="tel:+989021211074">(+98)9021211074</a>
         </div>
       </div>
 
@@ -106,11 +122,19 @@
           </li>
           <li>
             <div class="bullet"></div>
-            <h3>touch typer</h3>
+            <h3>Thorough understanding of UI/UX concepts</h3>
           </li>
           <li>
             <div class="bullet"></div>
-            <h3>passionate</h3>
+            <h3>Knowledge of SEO techniques</h3>
+          </li>
+          <li>
+            <div class="bullet"></div>
+            <h3>basics of Photoshop</h3>
+          </li>
+          <li>
+            <div class="bullet"></div>
+            <h3>touch typer</h3>
           </li>
           <li>
             <div class="bullet"></div>
@@ -150,12 +174,12 @@
             <br />
             At first, Everything began by learning C/C++ in the first semester
             to get a taste of what programming is capable of. Then, I learned
-            object oriented concept by doing some university projects with JAVA.
-            Afterwards, I spent a year learning PYTHON and solving over 110
+            object oriented concept by doing some university projects with Java.
+            Afterwards, I spent a year learning Python and solving over 110
             programming problems on "quera.ir" to enforce my mind to find
-            algorithms more efficiently. At last, by the end of 2020, I had
-            enough knowledge to enter front-end web development field and my
-            professional career started since then...
+            algorithms more efficiently. At last, by early 2020, I had enough
+            knowledge to enter front-end web development field and my
+            professional career started since then.
           </div>
         </template>
       </ResumeInformationCard>
@@ -172,15 +196,13 @@
         <template #content>
           <div class="resume-right__info-card">
             <h3 class="resume-right__info-card__position">
-              BS.c in computer Engineering
+              BS.c in Computer Engineering
             </h3>
             <div class="flex-space-between">
               <div class="resume-right__info-card__location">
                 Shahrood University of technology
               </div>
               <div class="resume-right__info-card__date">
-                IR, Iran
-                <br />
                 Sep. 2018 - present
               </div>
             </div>
@@ -201,30 +223,6 @@
           </svg>
         </template>
         <template #content>
-          <!-- Ryca -->
-          <div class="resume-right__info-card">
-            <h3 class="resume-right__info-card__position">
-              Front-end Developer
-            </h3>
-            <div class="flex-space-between">
-              <div class="resume-right__info-card__location">
-                Avay-e Hooshmand-e Ryca
-              </div>
-              <div class="resume-right__info-card__date">
-                IR, Iran
-                <br />
-                Jun. 2021 - Sep. 2021
-              </div>
-            </div>
-            <div class="resume-right__info-card__description">
-              My internship job which I worked on two admin panels.
-              <br />
-              "msmarket" which was the one that played a bigger role in, was for
-              managing stockholders' information of a particular company. The
-              atmosphere was fun and I worked with awesome people there!
-            </div>
-          </div>
-
           <!-- Bazarkhodro -->
           <div class="resume-right__info-card">
             <h3 class="resume-right__info-card__position">
@@ -235,8 +233,6 @@
                 Tose-e Tejarat Chabok Garayan
               </div>
               <div class="resume-right__info-card__date">
-                IR, Iran
-                <br />
                 Sep. 2021 - present
               </div>
             </div>
@@ -249,7 +245,7 @@
                 style="font-weight: bold"
                 target="_blank"
               >
-                "www.bazarkhodro.ir"
+                Bazarkhodro.ir
               </a>
               : A feature-rich website enabling users to buy/sell cars in the
               country.
@@ -260,11 +256,84 @@
                 style="font-weight: bold"
                 target="_blank"
               >
-                "www.rentifa.com"
+                Rentifa.com
               </a>
               : A useful website for users to rent cars in specific cities of
               the country. Also, provided admin panels for agents to be able to
               put their vehicles on the website for renting.
+            </div>
+          </div>
+
+          <!-- Ryca -->
+          <div class="resume-right__info-card">
+            <h3 class="resume-right__info-card__position">
+              Front-end Developer
+            </h3>
+            <div class="flex-space-between">
+              <div class="resume-right__info-card__location">
+                Avay-e Hooshmand-e Ryca
+              </div>
+              <div class="resume-right__info-card__date">
+                Jun. 2021 - Sep. 2021
+              </div>
+            </div>
+            <div class="resume-right__info-card__description">
+              My internship job which I worked on two admin panels.
+              <br />
+              <a
+                href="https://msmarket.ir/"
+                style="font-weight: bold"
+                target="_blank"
+              >
+                Msmarket.ir
+              </a>
+              : which was the one that played a bigger role in, was for managing
+              stockholders' information of a particular company. The atmosphere
+              was fun and I worked with awesome people there!
+            </div>
+          </div>
+
+          <!-- self employed -->
+          <div class="resume-right__info-card">
+            <h3 class="resume-right__info-card__position">
+              Front-end Developer
+            </h3>
+            <div class="flex-space-between">
+              <div class="resume-right__info-card__location">
+                Self-employed (Freelancing)
+              </div>
+              <div class="resume-right__info-card__date">
+                Feb 2020 - Jun. 2021
+              </div>
+            </div>
+            <div class="resume-right__info-card__description">
+              Before making use of the power of frameworks, I started with some
+              free-lance projects using vanilla HTML/CSS/Javascript to fully
+              understand the basics. the following projects are two examples of
+              my work when I first began my journey:
+              <br />
+              <a
+                href="https://nutricasteel.com/"
+                style="font-weight: bold"
+                target="_blank"
+              >
+                Nutricasteel.com
+              </a>
+              : A website belonging to a small start-up called "Nutricasteel" to
+              better introduce their products to their customers from various
+              countries.
+              <br />
+              <br />
+              <a
+                href="https://hivasls2.ir/"
+                style="font-weight: bold"
+                target="_blank"
+              >
+                Hivasls.ir
+              </a>
+              : A single-page website being a door for students of
+              "Shokuh-e-hiva" language institute to enter their online learning
+              platform panel.
             </div>
           </div>
         </template>
@@ -377,7 +446,7 @@ h3 {
           border-radius: 50%;
           padding: 0.4rem;
           width: 30px;
-          aspect-ratio: 1/1;
+          height: 30px;
           display: grid;
           place-items: center;
 
@@ -392,7 +461,9 @@ h3 {
           padding-bottom: 0.25rem;
         }
 
-        p {
+        p,
+        a {
+          text-decoration: none;
           grid-area: subtitle;
           font-size: $font-body;
         }
