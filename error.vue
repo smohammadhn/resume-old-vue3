@@ -3,8 +3,9 @@
 </template>
 
 <script setup>
+// eslint-disable-next-line no-unused-vars
 const props = defineProps({
-  error: Object
+  error: Object,
 })
 
 const handleError = () => clearError({ redirect: '/' })
