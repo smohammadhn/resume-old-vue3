@@ -163,13 +163,15 @@
       </div>
 
       <!-- main title -->
-      <h1>
+      <h1 class="bottom-spacer-1">
         S.Mohammad
         <br />
         Hosseininejad
       </h1>
       <!-- subtitle -->
-      <p class="resume-right__subheader">Front-end web developer</p>
+      <p class="resume-right__subheader bottom-spacer-3">
+        Front-end Web Developer | Vue.js
+      </p>
 
       <!-- history -->
       <ResumeInformationCard title="my history">
@@ -512,11 +514,6 @@ h1 {
       @media screen and (max-width: $breakpoint-layout-shift) {
         grid-row: 1;
       }
-    }
-
-    &__subheader {
-      text-transform: capitalize;
-      margin-bottom: 6rem;
     }
 
     &__profile {
