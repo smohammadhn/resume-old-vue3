@@ -8,4 +8,6 @@ export default defineNuxtConfig({
     '~/assets/styles/variables.scss',
     '~/assets/styles/global.css',
   ],
+
+  buildModules: ['@nuxtjs/device'],
 })
