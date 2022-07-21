@@ -473,7 +473,6 @@ h3 {
         a {
           text-decoration: none;
           grid-area: subtitle;
-          font-size: $font-body;
         }
       }
 
@@ -494,7 +493,6 @@ h3 {
           color: white;
           font-weight: bold;
           border-radius: 5px;
-          font-size: $font-body;
           display: grid;
           place-items: center;
         }
@@ -531,12 +529,10 @@ h3 {
 
     &__subheader {
       text-transform: capitalize;
-      font-size: $font-body;
       margin-bottom: 6rem;
     }
 
     &__profile {
-      font-size: $font-body;
       line-height: 26px;
       text-align: justify;
       text-justify: inter-word;
@@ -557,12 +553,7 @@ h3 {
         }
       }
 
-      &__location {
-        font-size: $font-body;
-      }
-
       &__date {
-        font-size: $font-body;
         text-align: right;
 
         @media screen and (max-width: $breakpoint-layout-shift) {
@@ -571,7 +562,6 @@ h3 {
       }
 
       &__description {
-        font-size: $font-body;
         line-height: 25px;
         text-align: justify;
         text-justify: inter-word;
