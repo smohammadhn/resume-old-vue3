@@ -8,6 +8,11 @@ html {
   margin-inline: auto;
 }
 
+.grid-centered {
+  display: grid;
+  place-items: center;
+}
+
 .elevate-1 {
   box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
 }
@@ -39,9 +44,11 @@ html {
 .primary-heading {
   font-size: var(--fs-primary-heading);
   text-transform: uppercase;
+  font-weight: var(--fw-bold);
 }
 
 .secondary-heading {
   font-size: var(--fs-secondary-heading);
   text-transform: capitalize;
+  font-weight: var(--fw-bold);
 }

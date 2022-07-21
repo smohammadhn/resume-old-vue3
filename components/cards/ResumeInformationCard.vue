@@ -1,5 +1,5 @@
 <template>
-  <div class="ric">
+  <div class="ric bottom-spacer-3">
     <div class="ric-icon">
       <slot name="icon" />
     </div>
@@ -29,9 +29,8 @@ export default {
 
 .ric {
   border-left: 3px solid var(--clr-primary-700);
-  padding-left: min(6.5vw, 4rem);
+  padding-left: min(6.5vw, 3rem);
   margin-left: min(1vw, 1rem);
-  margin-bottom: 5rem;
   position: relative;
 
   &-icon {
@@ -41,7 +40,7 @@ export default {
     transform: translate(-50%, -20%);
     background: var(--clr-primary-700);
     border-radius: 50%;
-    padding: 0.7rem;
+    padding: 0.5rem;
     width: 45px;
     height: 45px;
     display: grid;
@@ -49,9 +48,9 @@ export default {
   }
 
   h2 {
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
     border-bottom: 3px solid var(--clr-primary-700);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 }
 </style>

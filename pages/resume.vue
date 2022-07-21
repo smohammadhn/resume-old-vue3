@@ -14,7 +14,7 @@
     <!-- body -->
     <div class="resume-left-column">
       <!-- image: only on desktop -->
-      <div class="resume-left__image">
+      <div class="resume-left__image grid-centered">
         <img
           class="hidden-on-mobile"
           src="~/assets/images/profile-square@500px.jpg"
@@ -22,7 +22,7 @@
         />
       </div>
       <!-- contact -->
-      <div class="resume-left__box">
+      <div class="resume-left__box bottom-spacer-3">
         <h2 class="resume-left__box-title primary-heading">contact</h2>
         <!-- contact box: 1 -->
         <div class="contact-box">
@@ -96,7 +96,7 @@
       </div>
 
       <!-- expertise -->
-      <div class="resume-left__box">
+      <div class="resume-left__box bottom-spacer-3">
         <h2 class="resume-left__box-title primary-heading">expertise</h2>
         <div class="expertise-box">
           <h3 class="secondary-heading">html5 / css3</h3>
@@ -121,7 +121,7 @@
       </div>
 
       <!-- pre skills -->
-      <div class="resume-left__box">
+      <div class="resume-left__box bottom-spacer-3">
         <h2 class="resume-left__box-title primary-heading">pre skills</h2>
         <ul class="pre-skills-box">
           <li>
@@ -155,7 +155,7 @@
     </div>
     <div class="resume-right-column">
       <!-- image: only on mobile -->
-      <div class="resume-left__image hidden-on-desktop">
+      <div v-if="$device.isMobile" class="resume-left__image hidden-on-desktop">
         <img
           src="~/assets/images/profile-square@500px.jpg"
           alt="profile picture"
@@ -174,7 +174,7 @@
       </p>
 
       <!-- history -->
-      <ResumeInformationCard title="my history">
+      <ResumeInformationCard title="About Me">
         <template #icon>
           <svg fill="white" viewBox="0 0 24 24">
             <path
@@ -183,19 +183,14 @@
           </svg>
         </template>
         <template #content>
-          <div class="resume-right__profile">
-            Born in 1999, I started diving into the realm of programming right
-            when I entered college;
-            <br />
-            At first, Everything began by learning C/C++ in the first semester
-            to get a taste of what programming is capable of. Then, I learned
-            object oriented concept by doing some university projects with Java.
-            Afterwards, I spent a year learning Python and solving over 110
-            programming problems on "quera.ir" to enforce my mind to find
-            algorithms more efficiently. At last, by early 2020, I had enough
-            knowledge to enter front-end web development field and my
-            professional career started since then.
-          </div>
+          <p class="resume-right__profile">
+            Result-oriented front-end developer with 2+ years of professional
+            experience with Vue.js and other frameworks on top, such as Nuxt.js
+            and Vuetify.js. Collaborated in and designed 10+ feature-rich admin
+            panels, websites and services used by wide range of customers in the
+            country. Skilled in front-end best-practices and concepts including
+            SSR, SEO techniques, UI/UX, and performance optimizations.
+          </p>
         </template>
       </ResumeInformationCard>
 
@@ -370,6 +365,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 2px;
   line-height: 1;
+  font-weight: var(--fw-bold);
 }
 
 @media screen and (max-width: $breakpoint-layout-shift) {
@@ -402,9 +398,7 @@ h1 {
     }
 
     &__image {
-      display: grid;
-      place-items: center;
-      padding-block: min(10vw, 5.5rem);
+      padding-block: min(10vw, 5rem);
       background: var(--clr-primary-300);
       border-radius: 10px;
 
@@ -421,8 +415,6 @@ h1 {
     }
 
     &__box {
-      margin-bottom: 9rem;
-
       &-title {
         text-transform: uppercase;
         padding-bottom: 0.5rem;
