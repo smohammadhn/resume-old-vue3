@@ -1,13 +1,5 @@
 <template>
-  <div class="container">
+  <div id="app" class="theme--dark container">
     <slot />
   </div>
 </template>
-
-<script setup></script>
-
-<style scoped>
-.container {
-  background: black;
-}
-</style>
