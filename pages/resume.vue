@@ -4,7 +4,10 @@
     <Html lang="en-US">
       <Head>
         <Title>S.Mohammad Hosseininejad</Title>
-        <Meta name="description" content="My resume" />
+        <Meta
+          name="description"
+          content="S.Mohammad Hosseininejad's resume page"
+        />
       </Head>
     </Html>
 
@@ -20,7 +23,7 @@
       </div>
       <!-- contact -->
       <div class="resume-left__box">
-        <h2 class="resume-left__box-title">contact</h2>
+        <h2 class="resume-left__box-title primary-heading">contact</h2>
         <!-- contact box: 1 -->
         <div class="contact-box">
           <div>
@@ -30,7 +33,7 @@
               />
             </svg>
           </div>
-          <h3>linkedin</h3>
+          <h3 class="secondary-heading">linkedin</h3>
           <a
             href="https://www.linkedin.com/in/seyed-mohammad-hosseininejad-1704a6233/"
             target="_blank"
@@ -47,7 +50,7 @@
               />
             </svg>
           </div>
-          <h3>github</h3>
+          <h3 class="secondary-heading">github</h3>
           <a href="https://github.com/smohammadhn" target="_blank">
             github.com/smohammadhn
           </a>
@@ -61,7 +64,7 @@
               />
             </svg>
           </div>
-          <h3>website</h3>
+          <h3 class="secondary-heading">website</h3>
           <a href="https://smohammadhn.com/" target="_blank">
             smohammadhn.com
           </a>
@@ -75,7 +78,7 @@
               />
             </svg>
           </div>
-          <h3>email</h3>
+          <h3 class="secondary-heading">email</h3>
           <a href="mailto:smohammadhnd@gmail.com">smohammadhnd@gmail.com</a>
         </div>
         <!-- contact box: 5 -->
@@ -87,63 +90,65 @@
               />
             </svg>
           </div>
-          <h3>phone</h3>
+          <h3 class="secondary-heading">phone</h3>
           <a href="tel:+989021211074">(+98)9021211074</a>
         </div>
       </div>
 
       <!-- expertise -->
       <div class="resume-left__box">
-        <h2 class="resume-left__box-title">expertise</h2>
+        <h2 class="resume-left__box-title primary-heading">expertise</h2>
         <div class="expertise-box">
-          <h3>html5 / css3</h3>
+          <h3 class="secondary-heading">html5 / css3</h3>
           <div>2.5 yr.</div>
         </div>
         <div class="expertise-box">
-          <h3>javascript / es6</h3>
+          <h3 class="secondary-heading">javascript / es6</h3>
           <div>2 yr.</div>
         </div>
         <div class="expertise-box">
-          <h3>vue2 / nuxt2</h3>
+          <h3 class="secondary-heading">vue2 / nuxt2</h3>
           <div>1 yr.</div>
         </div>
         <div class="expertise-box">
-          <h3>git / npm</h3>
+          <h3 class="secondary-heading">git / npm</h3>
           <div>2.5 yr.</div>
         </div>
         <div class="expertise-box">
-          <h3>vue3 / nuxt3 / typescript</h3>
+          <h3 class="secondary-heading">vue3 / nuxt3 / typescript</h3>
           <div>3 mo.</div>
         </div>
       </div>
 
       <!-- pre skills -->
       <div class="resume-left__box">
-        <h2 class="resume-left__box-title">pre skills</h2>
+        <h2 class="resume-left__box-title primary-heading">pre skills</h2>
         <ul class="pre-skills-box">
           <li>
             <div class="bullet"></div>
-            <h3>proficient in English</h3>
+            <h3 class="secondary-heading">proficient in English</h3>
           </li>
           <li>
             <div class="bullet"></div>
-            <h3>Thorough understanding of UI/UX concepts</h3>
+            <h3 class="secondary-heading">
+              Thorough understanding of UI/UX concepts
+            </h3>
           </li>
           <li>
             <div class="bullet"></div>
-            <h3>Knowledge of SEO techniques</h3>
+            <h3 class="secondary-heading">Knowledge of SEO techniques</h3>
           </li>
           <li>
             <div class="bullet"></div>
-            <h3>basics of Photoshop</h3>
+            <h3 class="secondary-heading">basics of Photoshop</h3>
           </li>
           <li>
             <div class="bullet"></div>
-            <h3>touch typer</h3>
+            <h3 class="secondary-heading">touch typer</h3>
           </li>
           <li>
             <div class="bullet"></div>
-            <h3>people-person</h3>
+            <h3 class="secondary-heading">people-person</h3>
           </li>
         </ul>
       </div>
@@ -354,30 +359,15 @@
 import ResumeInformationCard from '~/components/cards/ResumeInformationCard'
 </script>
 
-<script>
-export default {
-  layout: 'empty',
-}
-</script>
-
 <style lang="scss" scoped>
-@import 'assets/styles/variables';
 $breakpoint-layout-shift: 1050px;
 
 h1 {
-  font-size: min(10vw, 6rem);
-  margin-bottom: 2rem;
+  font-size: var(--fs-huge);
   margin-top: min(3vw, 4rem);
   text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-h2 {
-  font-size: 2.1rem;
-}
-
-h3 {
-  font-size: 1.4rem;
+  letter-spacing: 2px;
+  line-height: 1;
 }
 
 @media screen and (max-width: $breakpoint-layout-shift) {
@@ -394,12 +384,10 @@ h3 {
 
 .resume {
   margin-inline: auto;
-  border-radius: 20px;
   overflow: hidden;
-  max-width: 1400px;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  color: $color-green-dark;
+  color: var(--clr-primary-700);
 
   @media screen and (max-width: $breakpoint-layout-shift) {
     grid-template-columns: 1fr;
@@ -407,7 +395,7 @@ h3 {
 
   &-left {
     &-column {
-      background: $color-background;
+      background: var(--clr-primary-300);
       padding-inline: min(7vw, 3rem);
     }
 
@@ -415,7 +403,7 @@ h3 {
       display: grid;
       place-items: center;
       padding-block: min(10vw, 5.5rem);
-      background: $color-background;
+      background: var(--clr-primary-300);
       border-radius: 10px;
 
       img {
@@ -432,13 +420,12 @@ h3 {
 
     &__box {
       margin-bottom: 9rem;
-      color: $color-green-dark;
 
       &-title {
         text-transform: uppercase;
         padding-bottom: 0.5rem;
         margin-bottom: 2rem;
-        border-bottom: 3px solid $color-green-dark;
+        border-bottom: 3px solid var(--clr-primary-700);
       }
 
       .contact-box {
@@ -450,7 +437,7 @@ h3 {
 
         div {
           grid-area: img;
-          background: $color-green-dark;
+          background: var(--clr-primary-700);
           border-radius: 50%;
           padding: 0.4rem;
           width: 30px;
@@ -489,7 +476,7 @@ h3 {
         div {
           height: 35px;
           width: 70px;
-          background: $color-green-dark;
+          background: var(--clr-primary-700);
           color: white;
           font-weight: bold;
           border-radius: 5px;
@@ -508,7 +495,7 @@ h3 {
           .bullet {
             width: 10px;
             height: 10px;
-            background: $color-green-dark;
+            background: var(--clr-primary-700);
             margin-right: 0.75rem;
             border-radius: 50%;
           }

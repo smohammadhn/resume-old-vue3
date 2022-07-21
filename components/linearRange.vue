@@ -18,14 +18,14 @@ const props = withDefaults(defineProps<Props>(), {
 @import 'assets/styles/variables';
 
 .range {
-  outline: 2px solid $color-green-dark;
+  outline: 2px solid var(--clr-primary-700);
   height: 8px;
   display: grid;
   border-radius: 2px;
 
   .filled {
     width: v-bind('props.progress');
-    background: $color-green-dark;
+    background: var(--clr-primary-700);
     height: 100%;
     border-radius: inherit;
   }

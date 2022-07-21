@@ -3,7 +3,7 @@
     <div class="ric-icon">
       <slot name="icon" />
     </div>
-    <h2>{{ props.title }}</h2>
+    <h2 class='primary-heading'>{{ props.title }}</h2>
     <slot name="content" />
   </div>
 </template>
@@ -27,13 +27,8 @@ export default {
 <style lang="scss" scoped>
 @import 'assets/styles/variables';
 
-h2 {
-  font-size: 2rem;
-  text-transform: uppercase;
-}
-
 .ric {
-  border-left: 3px solid $color-green-dark;
+  border-left: 3px solid var(--clr-primary-700);
   padding-left: min(6.5vw, 4rem);
   margin-left: min(1vw, 1rem);
   margin-bottom: 5rem;
@@ -44,7 +39,7 @@ h2 {
     left: -2px;
     top: 0;
     transform: translate(-50%, -20%);
-    background: $color-green-dark;
+    background: var(--clr-primary-700);
     border-radius: 50%;
     padding: 0.7rem;
     width: 45px;
@@ -55,7 +50,7 @@ h2 {
 
   h2 {
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid $color-green-dark;
+    border-bottom: 3px solid var(--clr-primary-700);
     margin-bottom: 3rem;
   }
 }
