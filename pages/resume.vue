@@ -1,5 +1,5 @@
 <template>
-  <div class="resume container">
+  <main class="resume container">
     <!-- head -->
     <Html lang="en-US">
       <Head>
@@ -12,7 +12,7 @@
     </Html>
 
     <!-- body -->
-    <div class="resume-left-column">
+    <aside class="resume-left-column">
       <!-- image: only on desktop -->
       <div class="resume-left__image grid-centered">
         <img
@@ -23,7 +23,7 @@
       </div>
 
       <!-- contact -->
-      <div class="resume-left__box bottom-spacer-3">
+      <section role="region" class="resume-left__box bottom-spacer-3">
         <h2 class="resume-left__box-title primary-heading">contact</h2>
         <!-- contact box: 1 -->
         <div class="contact-box">
@@ -94,7 +94,7 @@
           <h3 class="secondary-heading">phone</h3>
           <a href="tel:+989021211074">(+98)9021211074</a>
         </div>
-      </div>
+      </section>
 
       <!-- pre skills -->
       <section role="region" class="resume-left__box bottom-spacer-3">
@@ -124,11 +124,26 @@
           </li>
         </ul>
       </section>
-    </div>
 
-    <div class="resume-right-column">
+      <!-- education -->
+      <section role="region" class="resume-left__box bottom-spacer-3">
+        <h2 class="resume-left__box-title primary-heading">education</h2>
+        <ul>
+          <li class="education-item">
+            <h3 class="secondary-heading">BS.c in Computer Engineering</h3>
+            <p>Shahrood University of technology</p>
+            <div>Sep. 2018 - Feb. 2023</div>
+            <p class="bulleted">
+              Ranked 5th among all industrial universities in the country
+            </p>
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+    <section role="region" class="resume-right-column">
       <!-- image: only on mobile -->
-      <div class="resume-left__image hidden-on-desktop">
+      <div class="resume-left__image grid-centered hidden-on-desktop">
         <img
           src="~/assets/images/profile-square@500px.jpg"
           alt="profile picture"
@@ -141,17 +156,14 @@
         <br />
         Hosseininejad
       </h1>
+
       <!-- subtitle -->
       <p class="bottom-spacer-3">Front-end Web Developer | Vue.js</p>
 
-      <!-- history -->
+      <!-- about me -->
       <ResumeInformationCard title="About Me">
         <template #icon>
-          <svg fill="white" viewBox="0 0 24 24">
-            <path
-              d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"
-            />
-          </svg>
+          <img src="~/assets/images/icons/profile.svg" alt="profile avatar" />
         </template>
         <template #content>
           <p class="resume-right__profile">
@@ -165,43 +177,20 @@
         </template>
       </ResumeInformationCard>
 
-      <!-- education -->
-      <ResumeInformationCard title="education">
+      <!-- skills -->
+      <ResumeInformationCard title="expertise">
         <template #icon>
-          <svg fill="white" viewBox="0 0 24 24">
-            <path
-              d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z"
-            />
-          </svg>
+          <img src="~/assets/images/icons/skills.svg" alt="skills icon" />
         </template>
         <template #content>
-          <div class="resume-right__info-card">
-            <h3 class="resume-right__info-card__position">
-              BS.c in Computer Engineering
-            </h3>
-            <div class="flex-space-between">
-              <div class="resume-right__info-card__location">
-                Shahrood University of technology
-              </div>
-              <div class="resume-right__info-card__date">
-                Sep. 2018 - present
-              </div>
-            </div>
-            <div class="resume-right__info-card__description">
-              Ranked 5th among all industrial universities in the country
-            </div>
-          </div>
+          <div class="expertise"></div>
         </template>
       </ResumeInformationCard>
 
       <!-- work experience -->
       <ResumeInformationCard title="work experience">
         <template #icon>
-          <svg fill="white" viewBox="0 0 24 24">
-            <path
-              d="M10 16V15H3L3 19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V15H14V16H10M20 7H16V5L14 3H10L8 5V7H4C2.9 7 2 7.9 2 9V12C2 13.11 2.89 14 4 14H10V12H14V14H20C21.1 14 22 13.1 22 12V9C22 7.9 21.1 7 20 7M14 7H10V5H14V7Z"
-            />
-          </svg>
+          <img src="~/assets/images/icons/suitcase.svg" alt="suitcase" />
         </template>
         <template #content>
           <!-- Bazarkhodro -->
@@ -319,8 +308,8 @@
           </div>
         </template>
       </ResumeInformationCard>
-    </div>
-  </div>
+    </section>
+  </main>
 </template>
 
 <script setup>
@@ -442,6 +431,22 @@ h1 {
           border-radius: 5px;
           text-transform: capitalize;
           text-align: center;
+        }
+      }
+
+      .education-item {
+        .bulleted {
+          margin-top: 0.75rem;
+
+          &::before {
+            content: '';
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            margin-right: 5px;
+            display: inline-block;
+            background-color: var(--clr-primary-700);
+          }
         }
       }
     }

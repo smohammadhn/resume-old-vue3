@@ -14,7 +14,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  title: 'professional statement',
+  title: 'box title',
 })
 </script>
 
@@ -30,7 +30,6 @@ export default {
 .ric {
   border-left: 3px solid var(--clr-primary-700);
   padding-left: min(6.5vw, 3rem);
-  margin-left: min(1vw, 1rem);
   position: relative;
 
   &-icon {
@@ -40,11 +39,9 @@ export default {
     transform: translate(-50%, -20%);
     background: var(--clr-primary-700);
     border-radius: 50%;
-    padding: 0.5rem;
+    padding: 0.65rem;
     width: 45px;
     height: 45px;
-    display: grid;
-    place-items: center;
   }
 
   h2 {
