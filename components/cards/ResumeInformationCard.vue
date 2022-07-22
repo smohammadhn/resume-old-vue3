@@ -48,9 +48,8 @@ export default {
   }
 
   h2 {
-    padding-bottom: 0.4rem;
     border-bottom: 3px solid var(--clr-primary-700);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 }
 </style>

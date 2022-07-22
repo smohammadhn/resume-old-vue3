@@ -1,5 +1,5 @@
 <template>
-  <div class="resume">
+  <div class="resume container">
     <!-- head -->
     <Html lang="en-US">
       <Head>
@@ -21,6 +21,7 @@
           alt="profile picture"
         />
       </div>
+
       <!-- contact -->
       <div class="resume-left__box bottom-spacer-3">
         <h2 class="resume-left__box-title primary-heading">contact</h2>
@@ -95,67 +96,39 @@
         </div>
       </div>
 
-      <!-- expertise -->
-      <div class="resume-left__box bottom-spacer-3">
-        <h2 class="resume-left__box-title primary-heading">expertise</h2>
-        <div class="expertise-box">
-          <h3 class="secondary-heading">html5 / css3</h3>
-          <div>2.5 yr.</div>
-        </div>
-        <div class="expertise-box">
-          <h3 class="secondary-heading">javascript / es6</h3>
-          <div>2 yr.</div>
-        </div>
-        <div class="expertise-box">
-          <h3 class="secondary-heading">vue2 / nuxt2</h3>
-          <div>1 yr.</div>
-        </div>
-        <div class="expertise-box">
-          <h3 class="secondary-heading">git / npm</h3>
-          <div>2.5 yr.</div>
-        </div>
-        <div class="expertise-box">
-          <h3 class="secondary-heading">vue3 / nuxt3 / typescript</h3>
-          <div>3 mo.</div>
-        </div>
-      </div>
-
       <!-- pre skills -->
-      <div class="resume-left__box bottom-spacer-3">
+      <section role="region" class="resume-left__box bottom-spacer-3">
         <h2 class="resume-left__box-title primary-heading">pre skills</h2>
-        <ul class="pre-skills-box">
-          <li>
-            <div class="bullet"></div>
-            <h3 class="secondary-heading">proficient in English</h3>
+        <ul>
+          <li class="pre-skills-box">
+            <h3 class="secondary-heading">English</h3>
+            <div>full proficiency</div>
           </li>
-          <li>
-            <div class="bullet"></div>
-            <h3 class="secondary-heading">
-              Thorough understanding of UI/UX concepts
-            </h3>
+
+          <li class="pre-skills-box">
+            <h3 class="secondary-heading">photoshop</h3>
+            <div>basic familiarity</div>
           </li>
-          <li>
-            <div class="bullet"></div>
-            <h3 class="secondary-heading">Knowledge of SEO techniques</h3>
+
+          <li class="pre-skills-box">
+            <h3 class="secondary-heading">adobeXD / figma</h3>
+            <div>basic familiarity</div>
           </li>
-          <li>
-            <div class="bullet"></div>
-            <h3 class="secondary-heading">basics of Photoshop</h3>
+
+          <li class="pre-skills-box">
+            <h3 class="secondary-heading">communication and lecturing</h3>
           </li>
-          <li>
-            <div class="bullet"></div>
-            <h3 class="secondary-heading">touch typer</h3>
-          </li>
-          <li>
-            <div class="bullet"></div>
-            <h3 class="secondary-heading">people-person</h3>
+
+          <li class="pre-skills-box">
+            <h3 class="secondary-heading">Team-player</h3>
           </li>
         </ul>
-      </div>
+      </section>
     </div>
+
     <div class="resume-right-column">
       <!-- image: only on mobile -->
-      <div v-if="$device.isMobile" class="resume-left__image hidden-on-desktop">
+      <div class="resume-left__image hidden-on-desktop">
         <img
           src="~/assets/images/profile-square@500px.jpg"
           alt="profile picture"
@@ -169,9 +142,7 @@
         Hosseininejad
       </h1>
       <!-- subtitle -->
-      <p class="resume-right__subheader bottom-spacer-3">
-        Front-end Web Developer | Vue.js
-      </p>
+      <p class="bottom-spacer-3">Front-end Web Developer | Vue.js</p>
 
       <!-- history -->
       <ResumeInformationCard title="About Me">
@@ -363,7 +334,7 @@ h1 {
   font-size: var(--fs-huge);
   margin-top: min(3vw, 4rem);
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   line-height: 1;
   font-weight: var(--fw-bold);
 }
@@ -416,9 +387,7 @@ h1 {
 
     &__box {
       &-title {
-        text-transform: uppercase;
-        padding-bottom: 0.5rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         border-bottom: 3px solid var(--clr-primary-700);
       }
 
@@ -457,42 +426,22 @@ h1 {
         }
       }
 
-      .expertise-box {
+      .pre-skills-box {
         margin-block: 1.25rem;
         display: flex;
         justify-content: space-between;
         place-items: center;
 
-        h3 {
-          text-transform: uppercase;
-        }
-
         div {
-          height: 35px;
-          width: 70px;
+          padding-block: 0.4rem;
+          align-self: stretch;
+          width: 140px;
           background: var(--clr-primary-700);
           color: white;
-          font-weight: bold;
+          font-weight: var(--fw-bold);
           border-radius: 5px;
-          display: grid;
-          place-items: center;
-        }
-      }
-
-      .pre-skills-box {
-        li {
-          margin-block: 1.25rem;
-          display: flex;
-          align-items: center;
           text-transform: capitalize;
-
-          .bullet {
-            width: 10px;
-            height: 10px;
-            background: var(--clr-primary-700);
-            margin-right: 0.75rem;
-            border-radius: 50%;
-          }
+          text-align: center;
         }
       }
     }

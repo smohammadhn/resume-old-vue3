@@ -3,3 +3,9 @@
     <slot />
   </div>
 </template>
+
+<style>
+.theme--dark {
+  background-color: #eee;
+}
+</style>
