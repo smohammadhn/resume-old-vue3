@@ -183,7 +183,41 @@
           <img src="~/assets/images/icons/skills.svg" alt="skills icon" />
         </template>
         <template #content>
-          <div class="expertise"></div>
+          <ul class="expertise">
+            <li>
+              <TechBadge text="VUE2 / NUXT2 / VUETIFY2" duration="1.5 yr." />
+            </li>
+            <li>
+              <TechBadge text="VUE3 / NUXT3 / TYPESCRIPT" duration="0.5 yr." />
+            </li>
+            <li>
+              <TechBadge text="HTML5 / CSS3" duration="3 yr." />
+            </li>
+            <li>
+              <TechBadge text="JAVASCRIPT / ES6" duration="2.5 yr." />
+            </li>
+            <li>
+              <TechBadge text="GIT / NPM" />
+            </li>
+            <li>
+              <TechBadge text="CYPRESS" />
+            </li>
+            <li>
+              <TechBadge text="VUEX" />
+            </li>
+            <li>
+              <TechBadge text="Server-side Rendering" />
+            </li>
+            <li>
+              <TechBadge text="SEO" />
+            </li>
+            <li>
+              <TechBadge text="VITE" />
+            </li>
+            <li>
+              <TechBadge text="Agile methodologies" />
+            </li>
+          </ul>
         </template>
       </ResumeInformationCard>
 
@@ -314,6 +348,7 @@
 
 <script setup>
 import ResumeInformationCard from '~/components/cards/ResumeInformationCard'
+import TechBadge from '../components/badges/TechBadge'
 </script>
 
 <style lang="scss" scoped>
@@ -424,13 +459,14 @@ h1 {
         div {
           padding-block: 0.4rem;
           align-self: stretch;
-          width: 140px;
+          width: 130px;
           background: var(--clr-primary-700);
           color: white;
           font-weight: var(--fw-bold);
           border-radius: 5px;
           text-transform: capitalize;
           text-align: center;
+          font-size: 90%;
         }
       }
 
@@ -459,6 +495,12 @@ h1 {
 
       @media screen and (max-width: $breakpoint-layout-shift) {
         grid-row: 1;
+      }
+
+      .expertise {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
       }
     }
 
