@@ -143,7 +143,10 @@
 
     <section role="region" class="resume-right-column">
       <!-- image: only on mobile -->
-      <div class="resume-left__image grid-centered hidden-on-desktop">
+      <div
+        v-if="onMobile"
+        class="resume-left__image grid-centered hidden-on-desktop"
+      >
         <img
           src="~/assets/images/profile-square@500px.jpg"
           alt="profile picture"
@@ -200,9 +203,6 @@
               <TechBadge text="GIT / NPM" />
             </li>
             <li>
-              <TechBadge text="CYPRESS" />
-            </li>
-            <li>
               <TechBadge text="VUEX" />
             </li>
             <li>
@@ -213,6 +213,12 @@
             </li>
             <li>
               <TechBadge text="VITE" />
+            </li>
+            <li>
+              <TechBadge text="SASS" />
+            </li>
+            <li>
+              <TechBadge text="CYPRESS" />
             </li>
             <li>
               <TechBadge text="Agile methodologies" />
@@ -349,6 +355,13 @@
 <script setup>
 import ResumeInformationCard from '~/components/cards/ResumeInformationCard'
 import TechBadge from '../components/badges/TechBadge'
+import { onMounted, ref } from 'vue'
+
+const onMobile = ref()
+
+onMounted(() => {
+  onMobile.value = window.innerWidth < 1000
+})
 </script>
 
 <style lang="scss" scoped>

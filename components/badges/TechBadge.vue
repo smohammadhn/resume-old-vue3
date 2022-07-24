@@ -24,6 +24,8 @@ div {
   background-color: var(--clr-primary-200);
   display: flex;
   align-items: center;
+  border-radius: 4px;
+  overflow: hidden;
 
   .text {
     padding-inline: $inline-padding;
