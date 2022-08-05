@@ -206,10 +206,16 @@
               <TechBadge text="VUEX" />
             </li>
             <li>
+              <TechBadge text="VUETIFY.JS" />
+            </li>
+            <li>
               <TechBadge text="Server-side Rendering" />
             </li>
             <li>
               <TechBadge text="SEO" />
+            </li>
+            <li>
+              <TechBadge text="I18n (internationalization)" />
             </li>
             <li>
               <TechBadge text="VITE" />
