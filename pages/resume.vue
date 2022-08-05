@@ -239,118 +239,165 @@
           <img src="~/assets/images/icons/suitcase.svg" alt="suitcase" />
         </template>
         <template #content>
-          <!-- Bazarkhodro -->
-          <div class="resume-right__info-card">
-            <h3 class="resume-right__info-card__position">
-              Front-end Developer
-            </h3>
-            <div class="flex-space-between">
-              <div class="resume-right__info-card__location">
-                Tose-e Tejarat Chabok Garayan
-              </div>
-              <div class="resume-right__info-card__date">
-                Sep. 2021 - present
-              </div>
+          <!-- bazarkhodro -->
+          <div class="work-exp bottom-spacer-2">
+            <div class="work-exp--title">
+              <div>Front-end Developer at Bazarkhodro</div>
+              <span>Sep. 2021 - present (9 mos.)</span>
             </div>
-            <div class="resume-right__info-card__description">
+
+            <p class="work-exp--description">
               Working on five repositories including two websites and three
               admin panels.
-              <br />
-              <a
-                href="https://bazarkhodro.ir/"
-                style="font-weight: bold"
-                target="_blank"
-              >
-                Bazarkhodro.ir
-              </a>
-              : A feature-rich website enabling users to buy/sell cars in the
-              country.
-              <br />
-              <br />
-              <a
-                href="https://rentifa.com/"
-                style="font-weight: bold"
-                target="_blank"
-              >
-                Rentifa.com
-              </a>
-              : A useful website for users to rent cars in specific cities of
-              the country. Also, provided admin panels for agents to be able to
-              put their vehicles on the website for renting.
-            </div>
+            </p>
+
+            <ul class="work-exp--tech">
+              <li>
+                <TechBadge text="Vue.js" />
+              </li>
+            </ul>
+
+            <ul class="work-exp--products">
+              <li class="bottom-spacer-1">
+                <img
+                  src="~/assets/images/logos/rentifa.png"
+                  alt="bazarkhodro fav icon"
+                  class="rectangle"
+                />
+                <span>
+                  <a
+                    href="https://rentifa.com/"
+                    style="font-weight: bold"
+                    target="_blank"
+                  >
+                    Rentifa.com
+                  </a>
+                  is a bilingual website providing car rental service in the
+                  country and neighboring countries.
+                </span>
+              </li>
+
+              <li>
+                <img
+                  src="~/assets/images/logos/bazarkhodro.svg"
+                  alt="bazarkhodro fav icon"
+                  class="rectangle"
+                />
+                <span>
+                  <a
+                    href="https://bazarkhodro.ir/"
+                    target="_blank"
+                    class="fw-bold"
+                  >
+                    Bazarkhodro.ir
+                  </a>
+                  is a feature-rich website enabling users to buy/sell cars in
+                  the country.
+                </span>
+              </li>
+            </ul>
           </div>
 
           <!-- Ryca -->
-          <div class="resume-right__info-card">
-            <h3 class="resume-right__info-card__position">
-              Front-end Developer
-            </h3>
-            <div class="flex-space-between">
-              <div class="resume-right__info-card__location">
-                Avay-e Hooshmand-e Ryca
-              </div>
-              <div class="resume-right__info-card__date">
-                Jun. 2021 - Sep. 2021
-              </div>
+          <div class="work-exp bottom-spacer-2">
+            <div class="work-exp--title">
+              <div>Front-end Developer at Ryca</div>
+              <span>Jun. 2021 - Sep. 2021 (4 mos.)</span>
             </div>
-            <div class="resume-right__info-card__description">
-              My internship job which I worked on two admin panels.
-              <br />
-              <a
-                href="https://msmarket.ir/"
-                style="font-weight: bold"
-                target="_blank"
-              >
-                Msmarket.ir
-              </a>
-              : which was the one that played a bigger role in, was for managing
-              stockholders' information of a particular company. The atmosphere
-              was fun and I worked with awesome people there!
-            </div>
+
+            <p class="work-exp--description">
+              My internship job which I worked on two admin panels. I worked
+              with awesome people there!
+            </p>
+
+            <ul class="work-exp--tech">
+              <li>
+                <TechBadge text="Vue.js" />
+              </li>
+            </ul>
+
+            <ul class="work-exp--products">
+              <li class="bottom-spacer-1">
+                <img
+                  src="~/assets/images/logos/ryca.svg"
+                  alt="bazarkhodro fav icon"
+                  class="square"
+                />
+                <span>
+                  <a
+                    href="https://msmarket.ir/"
+                    style="font-weight: bold"
+                    target="_blank"
+                  >
+                    Msmarket.ir
+                  </a>
+                  is a convenient admin panel for managing stockholders'
+                  information of a particular company.
+                </span>
+              </li>
+            </ul>
           </div>
 
-          <!-- self employed -->
-          <div class="resume-right__info-card">
-            <h3 class="resume-right__info-card__position">
-              Front-end Developer
-            </h3>
-            <div class="flex-space-between">
-              <div class="resume-right__info-card__location">
-                Self-employed (Freelancing)
-              </div>
-              <div class="resume-right__info-card__date">
-                Feb 2020 - Jun. 2021
-              </div>
+          <!-- freelance -->
+          <div class="work-exp bottom-spacer-2">
+            <div class="work-exp--title">
+              <div>Freelance Front-end Developer</div>
+              <span>Feb 2020 - Jun. 2021 (~1.5 yr.)</span>
             </div>
-            <div class="resume-right__info-card__description">
-              Before making use of the power of frameworks, I started with some
-              free-lance projects using vanilla HTML/CSS/Javascript to fully
-              understand the basics. the following projects are two examples of
-              my work when I first began my journey:
-              <br />
-              <a
-                href="https://nutricasteel.com/"
-                style="font-weight: bold"
-                target="_blank"
-              >
-                Nutricasteel.com
-              </a>
-              : A website belonging to a small start-up called "Nutricasteel" to
-              better introduce their products to their customers from various
-              countries.
-              <br />
-              <br />
-              <a
-                href="https://hivasls2.ir/"
-                style="font-weight: bold"
-                target="_blank"
-              >
-                Hivasls.ir
-              </a>
-              : A single-page website being a door for students of
-              "Shokuh-e-hiva" language institute to enter their online learning
-              platform panel.
-            </div>
+
+            <ul class="work-exp--tech">
+              <li>
+                <TechBadge text="HTML5" />
+              </li>
+              <li>
+                <TechBadge text="CSS3" />
+              </li>
+              <li>
+                <TechBadge text="JAVASCRIPT" />
+              </li>
+            </ul>
+
+            <ul class="work-exp--products">
+              <li class="bottom-spacer-1">
+                <img
+                  src="~/assets/images/logos/nutrica.png"
+                  alt="bazarkhodro fav icon"
+                  class="square black-background"
+                />
+                <span>
+                  <a
+                    href="https://nutricasteel.com/"
+                    style="font-weight: bold"
+                    target="_blank"
+                  >
+                    Nutricasteel.com
+                  </a>
+                  is a website belonging to a start-up called "Nutricasteel" to
+                  introduce their products to their customers from various
+                  countries.
+                </span>
+              </li>
+
+              <li>
+                <img
+                  src="~/assets/images/logos/hivasls.png"
+                  alt="bazarkhodro fav icon"
+                  class="square"
+                />
+                <span>
+                  <a
+                    href="https://hivasls2.ir/"
+                    style="font-weight: bold"
+                    target="_blank"
+                  >
+                    Hivasls.ir
+                  </a>
+                  is a single-page website for students of "Shokuh-e-hiva"
+                  language institute to enter their online learning platform
+                  panel. (BigBlueButton)
+                </span>
+              </li>
+            </ul>
           </div>
         </template>
       </ResumeInformationCard>
@@ -521,42 +568,63 @@ h1 {
         flex-wrap: wrap;
         gap: 0.75rem;
       }
+
+      .work-exp {
+        &--title {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          div {
+            font-size: var(--fs-sub-primary-heading);
+          }
+
+          span {
+            opacity: 0.8;
+          }
+        }
+
+        &--tech {
+          display: flex;
+          margin-top: 0.5rem;
+          margin-bottom: 1rem;
+          gap: 0.75rem;
+        }
+
+        &--products {
+          li {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 110px 1fr;
+            gap: 1rem;
+
+            img {
+              justify-self: center;
+
+              &.square {
+                width: 60px;
+                aspect-ratio: 1 / 1;
+              }
+
+              &.rectangle {
+                width: 111px;
+                height: auto;
+              }
+
+              &.black-background {
+                background: rgba(0, 0, 0);
+                border-radius: 10px;
+              }
+            }
+          }
+        }
+      }
     }
 
     &__profile {
       line-height: 26px;
       text-align: justify;
       text-justify: inter-word;
-    }
-
-    &__info-card {
-      margin-bottom: 4rem;
-
-      .flex-space-between {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 0.5rem;
-
-        @media screen and (max-width: 550px) {
-          flex-direction: column;
-          text-align: center;
-          margin-block: 1.5rem;
-        }
-      }
-
-      &__date {
-        text-align: right;
-
-        @media screen and (max-width: $breakpoint-layout-shift) {
-          text-align: center;
-        }
-      }
-
-      &__description {
-        line-height: 25px;
-        text-align: justify;
-        text-justify: inter-word;
-      }
     }
   }
 }
