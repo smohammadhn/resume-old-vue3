@@ -23,7 +23,7 @@
       </div>
 
       <!-- contact -->
-      <section role="region" class="resume-left__box bottom-spacer-3">
+      <section role="region" class="resume-left__box bottom-spacer-4">
         <h2 class="resume-left__box-title primary-heading">contact</h2>
         <!-- contact box: 1 -->
         <div class="contact-box">
@@ -97,7 +97,7 @@
       </section>
 
       <!-- pre skills -->
-      <section role="region" class="resume-left__box bottom-spacer-3">
+      <section role="region" class="resume-left__box bottom-spacer-4">
         <h2 class="resume-left__box-title primary-heading">pre skills</h2>
         <ul>
           <li class="pre-skills-box">
@@ -120,13 +120,17 @@
           </li>
 
           <li class="pre-skills-box">
-            <h3 class="secondary-heading">Team-player</h3>
+            <h3 class="secondary-heading">Team-playing</h3>
+          </li>
+
+          <li class="pre-skills-box">
+            <h3 class="secondary-heading">Problem-solving</h3>
           </li>
         </ul>
       </section>
 
       <!-- education -->
-      <section role="region" class="resume-left__box bottom-spacer-3">
+      <section role="region" class="resume-left__box">
         <h2 class="resume-left__box-title primary-heading">education</h2>
         <ul>
           <li class="education-item">
@@ -240,7 +244,7 @@
         </template>
         <template #content>
           <!-- bazarkhodro -->
-          <div class="work-exp bottom-spacer-2">
+          <div class="work-exp bottom-spacer-3">
             <div class="work-exp--title">
               <div>Front-end Developer at Bazarkhodro</div>
               <span>Sep. 2021 - present (9 mos.)</span>
@@ -317,7 +321,7 @@
           </div>
 
           <!-- Ryca -->
-          <div class="work-exp bottom-spacer-2">
+          <div class="work-exp bottom-spacer-3">
             <div class="work-exp--title">
               <div>Front-end Developer at Ryca</div>
               <span>Jun. 2021 - Sep. 2021 (4 mos.)</span>
@@ -372,7 +376,7 @@
           </div>
 
           <!-- freelance -->
-          <div class="work-exp bottom-spacer-2">
+          <div class="work-exp">
             <div class="work-exp--title">
               <div>Freelance Front-end Developer</div>
               <span>Feb 2020 - Jun. 2021 (~1.5 yr.)</span>
