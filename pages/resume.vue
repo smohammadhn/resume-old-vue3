@@ -16,7 +16,7 @@
       <!-- image: only on desktop -->
       <div class="resume-left__image grid-centered">
         <img
-          class="hidden-on-mobile"
+          class="hidden-on-mobile elevate-3"
           src="~/assets/images/profile-square@500px.jpg"
           alt="profile picture"
         />
@@ -98,7 +98,7 @@
 
       <!-- pre skills -->
       <section role="region" class="resume-left__box bottom-spacer-4">
-        <h2 class="resume-left__box-title primary-heading">pre skills</h2>
+        <h2 class="resume-left__box-title primary-heading">soft skills</h2>
         <ul>
           <li class="pre-skills-box">
             <h3 class="secondary-heading">English</h3>
@@ -130,7 +130,7 @@
       </section>
 
       <!-- education -->
-      <section role="region" class="resume-left__box">
+      <section role="region" class="resume-left__box bottom-spacer-3">
         <h2 class="resume-left__box-title primary-heading">education</h2>
         <ul>
           <li class="education-item">
@@ -149,11 +149,12 @@
       <!-- image: only on mobile -->
       <div
         v-if="onMobile"
-        class="resume-left__image grid-centered hidden-on-desktop"
+        class="resume-left__image grid-centered hidden-on-desktop mobile-image"
       >
         <img
           src="~/assets/images/profile-square@500px.jpg"
           alt="profile picture"
+          class="elevate-3"
         />
       </div>
 
@@ -486,7 +487,8 @@ h1 {
   color: var(--clr-primary-700);
 
   @media screen and (max-width: $breakpoint-layout-shift) {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   &-left {
@@ -496,19 +498,24 @@ h1 {
     }
 
     &__image {
-      padding-block: min(10vw, 5rem);
+      padding-block: min(10vw, 3.5rem);
       background: var(--clr-primary-300);
-      border-radius: 10px;
 
       img {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         border-radius: 50%;
+        border: 2px solid var(--clr-primary-100);
 
         @media screen and (max-width: $breakpoint-layout-shift) {
           width: max(35vw, 200px);
           height: max(35vw, 200px);
         }
+      }
+
+      &.mobile-image {
+        width: 100vw;
+        margin-inline-start: -5vw;
       }
     }
 
@@ -609,6 +616,7 @@ h1 {
       .work-exp {
         &--title {
           display: flex;
+          flex-wrap: wrap;
           align-items: center;
           justify-content: space-between;
 
@@ -623,6 +631,7 @@ h1 {
 
         &--tech {
           display: flex;
+          flex-wrap: wrap;
           margin-top: 0.5rem;
           margin-bottom: 1rem;
           gap: 0.75rem;
@@ -635,17 +644,16 @@ h1 {
             grid-template-columns: 110px 1fr;
             gap: 1rem;
 
+            @media screen and (max-width: $breakpoint-layout-shift) {
+              grid-template-columns: 50px 1fr;
+            }
+
             img {
               justify-self: center;
 
               &.square {
                 width: 60px;
                 aspect-ratio: 1 / 1;
-              }
-
-              &.rectangle {
-                width: 111px;
-                height: auto;
               }
 
               &.black-background {
