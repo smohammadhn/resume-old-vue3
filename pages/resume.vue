@@ -255,6 +255,24 @@
               <li>
                 <TechBadge text="Vue.js" />
               </li>
+              <li>
+                <TechBadge text="Nuxt.js" />
+              </li>
+              <li>
+                <TechBadge text="Vuetify.js" />
+              </li>
+              <li>
+                <TechBadge text="SEO" />
+              </li>
+              <li>
+                <TechBadge text="I18n" />
+              </li>
+              <li>
+                <TechBadge text="Responsive design" />
+              </li>
+              <li>
+                <TechBadge text="Web Performance" />
+              </li>
             </ul>
 
             <ul class="work-exp--products">
@@ -313,6 +331,21 @@
             <ul class="work-exp--tech">
               <li>
                 <TechBadge text="Vue.js" />
+              </li>
+              <li>
+                <TechBadge text="Nuxt.js" />
+              </li>
+              <li>
+                <TechBadge text="Vuetify.js" />
+              </li>
+              <li>
+                <TechBadge text="SCSS" />
+              </li>
+              <li>
+                <TechBadge text="GIT" />
+              </li>
+              <li>
+                <TechBadge text="API calls" />
               </li>
             </ul>
 
