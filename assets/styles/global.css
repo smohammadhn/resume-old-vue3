@@ -52,6 +52,10 @@ html {
   font-weight: var(--fw-bold);
 }
 
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
 /* -------------- utility classes ----------------- */
 .grid-centered {
   display: grid;

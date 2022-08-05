@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="elevate-3">
     <span class="text">
       {{ props.text }}
     </span>
