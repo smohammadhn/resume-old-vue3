@@ -1,10 +1,9 @@
-import { defineNuxtConfig } from 'nuxt3'
-
-// https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   css: [
-    '~/assets/styles/normalize.css',
-    '~/assets/styles/global.scss',
+    '~/assets/styles/reset.css',
+    '~/assets/styles/fonts.css',
     '~/assets/styles/variables.scss',
+    '~/assets/styles/global.css',
   ],
 })

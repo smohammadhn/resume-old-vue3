@@ -1,13 +1,11 @@
 <template>
-  <div class="container">
+  <div id="app" class="theme--dark">
     <slot />
   </div>
 </template>
 
-<script setup></script>
-
-<style scoped>
-.container {
-  background: black;
+<style>
+.theme--dark {
+  background-color: #eee;
 }
 </style>

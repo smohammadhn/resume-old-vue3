@@ -1,24 +1,26 @@
 module.exports = {
-  root: true,
   env: {
-    node: true,
     browser: true,
+    es2021: true,
+    node: true,
   },
+  parser: 'vue-eslint-parser',
   extends: [
-    'plugin:vue/recommended',
     'eslint:recommended',
-    'plugin:prettier/recommended',
+    'plugin:vue/essential',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
   ],
-  rules: {
-    'vue/component-name-in-template-casing': ['error', 'PascalCase'],
-    'vue/multi-word-component-names': 'off',
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-  },
-  globals: {
-    $nuxt: true,
-  },
   parserOptions: {
-    parser: 'babel-eslint',
+    ecmaVersion: 'latest',
+    parser: '@typescript-eslint/parser',
+    sourceType: 'module',
+  },
+  plugins: ['vue', '@typescript-eslint'],
+  rules: {
+    'linebreak-style': ['error', 'unix'],
+    quotes: ['error', 'single'],
+    semi: ['error', 'never'],
+    'vue/multi-word-component-names': 0,
   },
 }

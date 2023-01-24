@@ -1,26 +1,30 @@
 <template>
-  <div class="resume">
+  <main class="resume container">
     <!-- head -->
     <Html lang="en-US">
       <Head>
         <Title>S.Mohammad Hosseininejad</Title>
-        <Meta name="description" content="My resume" />
+        <Meta
+          name="description"
+          content="S.Mohammad Hosseininejad's resume page"
+        />
       </Head>
     </Html>
 
     <!-- body -->
-    <div class="resume-left-column">
+    <aside class="resume-left-column">
       <!-- image: only on desktop -->
-      <div class="resume-left__image">
+      <div class="resume-left__image grid-centered">
         <img
-          class="hidden-on-mobile"
+          class="hidden-on-mobile elevate-3"
           src="~/assets/images/profile-square@500px.jpg"
           alt="profile picture"
         />
       </div>
+
       <!-- contact -->
-      <div class="resume-left__box">
-        <h2 class="resume-left__box-title">contact</h2>
+      <section role="region" class="resume-left__box bottom-spacer-4">
+        <h2 class="resume-left__box-title primary-heading">contact</h2>
         <!-- contact box: 1 -->
         <div class="contact-box">
           <div>
@@ -30,7 +34,7 @@
               />
             </svg>
           </div>
-          <h3>linkedin</h3>
+          <h3 class="secondary-heading">linkedin</h3>
           <a
             href="https://www.linkedin.com/in/seyed-mohammad-hosseininejad-1704a6233/"
             target="_blank"
@@ -47,7 +51,7 @@
               />
             </svg>
           </div>
-          <h3>github</h3>
+          <h3 class="secondary-heading">github</h3>
           <a href="https://github.com/smohammadhn" target="_blank">
             github.com/smohammadhn
           </a>
@@ -61,7 +65,7 @@
               />
             </svg>
           </div>
-          <h3>website</h3>
+          <h3 class="secondary-heading">website</h3>
           <a href="https://smohammadhn.com/" target="_blank">
             smohammadhn.com
           </a>
@@ -75,7 +79,7 @@
               />
             </svg>
           </div>
-          <h3>email</h3>
+          <h3 class="secondary-heading">email</h3>
           <a href="mailto:smohammadhnd@gmail.com">smohammadhnd@gmail.com</a>
         </div>
         <!-- contact box: 5 -->
@@ -87,297 +91,380 @@
               />
             </svg>
           </div>
-          <h3>phone</h3>
+          <h3 class="secondary-heading">phone</h3>
           <a href="tel:+989021211074">(+98)9021211074</a>
         </div>
-      </div>
-
-      <!-- expertise -->
-      <div class="resume-left__box">
-        <h2 class="resume-left__box-title">expertise</h2>
-        <div class="expertise-box">
-          <h3>html5 / css3</h3>
-          <div>2.5 yr.</div>
-        </div>
-        <div class="expertise-box">
-          <h3>javascript / es6</h3>
-          <div>2 yr.</div>
-        </div>
-        <div class="expertise-box">
-          <h3>vue2 / nuxt2</h3>
-          <div>1 yr.</div>
-        </div>
-        <div class="expertise-box">
-          <h3>git / npm</h3>
-          <div>2.5 yr.</div>
-        </div>
-        <div class="expertise-box">
-          <h3>vue3 / nuxt3 / typescript</h3>
-          <div>3 mo.</div>
-        </div>
-      </div>
+      </section>
 
       <!-- pre skills -->
-      <div class="resume-left__box">
-        <h2 class="resume-left__box-title">pre skills</h2>
-        <ul class="pre-skills-box">
-          <li>
-            <div class="bullet"></div>
-            <h3>proficient in English</h3>
+      <section role="region" class="resume-left__box bottom-spacer-4">
+        <h2 class="resume-left__box-title primary-heading">soft skills</h2>
+        <ul>
+          <li class="pre-skills-box">
+            <h3 class="secondary-heading">English</h3>
+            <div>full proficiency</div>
           </li>
-          <li>
-            <div class="bullet"></div>
-            <h3>Thorough understanding of UI/UX concepts</h3>
+
+          <li class="pre-skills-box">
+            <h3 class="secondary-heading">photoshop</h3>
+            <div>basic familiarity</div>
           </li>
-          <li>
-            <div class="bullet"></div>
-            <h3>Knowledge of SEO techniques</h3>
+
+          <li class="pre-skills-box">
+            <h3 class="secondary-heading">adobeXD / figma</h3>
+            <div>basic familiarity</div>
           </li>
-          <li>
-            <div class="bullet"></div>
-            <h3>basics of Photoshop</h3>
+
+          <li class="pre-skills-box">
+            <h3 class="secondary-heading">communication and lecturing</h3>
           </li>
-          <li>
-            <div class="bullet"></div>
-            <h3>touch typer</h3>
+
+          <li class="pre-skills-box">
+            <h3 class="secondary-heading">Team-playing</h3>
           </li>
-          <li>
-            <div class="bullet"></div>
-            <h3>people-person</h3>
+
+          <li class="pre-skills-box">
+            <h3 class="secondary-heading">Problem-solving</h3>
           </li>
         </ul>
-      </div>
-    </div>
-    <div class="resume-right-column">
+      </section>
+
+      <!-- education -->
+      <section role="region" class="resume-left__box bottom-spacer-3">
+        <h2 class="resume-left__box-title primary-heading">education</h2>
+        <ul>
+          <li class="education-item">
+            <h3 class="secondary-heading">BS.c in Computer Engineering</h3>
+            <p>Shahrood University of technology</p>
+            <div>Sep. 2018 - Feb. 2023</div>
+            <p class="bulleted">
+              Ranked 5th among all industrial universities in the country
+            </p>
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+    <section role="region" class="resume-right-column">
       <!-- image: only on mobile -->
-      <div class="resume-left__image hidden-on-desktop">
+      <div
+        v-if="onMobile"
+        class="resume-left__image grid-centered hidden-on-desktop mobile-image"
+      >
         <img
           src="~/assets/images/profile-square@500px.jpg"
           alt="profile picture"
+          class="elevate-3"
         />
       </div>
 
       <!-- main title -->
-      <h1>
+      <h1 class="bottom-spacer-1">
         S.Mohammad
         <br />
         Hosseininejad
       </h1>
-      <!-- subtitle -->
-      <p class="resume-right__subheader">Front-end web developer</p>
 
-      <!-- history -->
-      <ResumeInformationCard title="my history">
+      <!-- subtitle -->
+      <p class="bottom-spacer-3">Front-end Web Developer | Vue.js</p>
+
+      <!-- about me -->
+      <ResumeInformationCard title="About Me">
         <template #icon>
-          <svg fill="white" viewBox="0 0 24 24">
-            <path
-              d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"
-            />
-          </svg>
+          <img src="~/assets/images/icons/profile.svg" alt="profile avatar" />
         </template>
         <template #content>
-          <div class="resume-right__profile">
-            Born in 1999, I started diving into the realm of programming right
-            when I entered college;
-            <br />
-            At first, Everything began by learning C/C++ in the first semester
-            to get a taste of what programming is capable of. Then, I learned
-            object oriented concept by doing some university projects with Java.
-            Afterwards, I spent a year learning Python and solving over 110
-            programming problems on "quera.ir" to enforce my mind to find
-            algorithms more efficiently. At last, by early 2020, I had enough
-            knowledge to enter front-end web development field and my
-            professional career started since then.
-          </div>
+          <p class="resume-right__profile">
+            Result-oriented front-end developer with 2+ years of professional
+            experience with Vue.js and other frameworks on top, such as Nuxt.js
+            and Vuetify.js. Collaborated in and designed 10+ feature-rich admin
+            panels, websites and services used by wide range of customers in the
+            country. Skilled in front-end best-practices and concepts including
+            SSR, SEO techniques, UI/UX, and performance optimizations.
+          </p>
         </template>
       </ResumeInformationCard>
 
-      <!-- education -->
-      <ResumeInformationCard title="education">
+      <!-- skills -->
+      <ResumeInformationCard title="expertise">
         <template #icon>
-          <svg fill="white" viewBox="0 0 24 24">
-            <path
-              d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z"
-            />
-          </svg>
+          <img src="~/assets/images/icons/skills.svg" alt="skills icon" />
         </template>
         <template #content>
-          <div class="resume-right__info-card">
-            <h3 class="resume-right__info-card__position">
-              BS.c in Computer Engineering
-            </h3>
-            <div class="flex-space-between">
-              <div class="resume-right__info-card__location">
-                Shahrood University of technology
-              </div>
-              <div class="resume-right__info-card__date">
-                Sep. 2018 - present
-              </div>
-            </div>
-            <div class="resume-right__info-card__description">
-              Ranked 5th among all industrial universities in the country
-            </div>
-          </div>
+          <ul class="expertise">
+            <li>
+              <TechBadge text="VUE2 / NUXT2 / VUETIFY2" duration="1.5 yr." />
+            </li>
+            <li>
+              <TechBadge text="VUE3 / NUXT3 / TYPESCRIPT" duration="0.5 yr." />
+            </li>
+            <li>
+              <TechBadge text="HTML5 / CSS3" duration="3 yr." />
+            </li>
+            <li>
+              <TechBadge text="JAVASCRIPT / ES6" duration="2.5 yr." />
+            </li>
+            <li>
+              <TechBadge text="GIT / NPM" />
+            </li>
+            <li>
+              <TechBadge text="VUEX" />
+            </li>
+            <li>
+              <TechBadge text="VUETIFY.JS" />
+            </li>
+            <li>
+              <TechBadge text="Server-side Rendering" />
+            </li>
+            <li>
+              <TechBadge text="SEO" />
+            </li>
+            <li>
+              <TechBadge text="I18n (internationalization)" />
+            </li>
+            <li>
+              <TechBadge text="VITE" />
+            </li>
+            <li>
+              <TechBadge text="SASS" />
+            </li>
+            <li>
+              <TechBadge text="CYPRESS" />
+            </li>
+            <li>
+              <TechBadge text="Agile methodologies" />
+            </li>
+          </ul>
         </template>
       </ResumeInformationCard>
 
       <!-- work experience -->
       <ResumeInformationCard title="work experience">
         <template #icon>
-          <svg fill="white" viewBox="0 0 24 24">
-            <path
-              d="M10 16V15H3L3 19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V15H14V16H10M20 7H16V5L14 3H10L8 5V7H4C2.9 7 2 7.9 2 9V12C2 13.11 2.89 14 4 14H10V12H14V14H20C21.1 14 22 13.1 22 12V9C22 7.9 21.1 7 20 7M14 7H10V5H14V7Z"
-            />
-          </svg>
+          <img src="~/assets/images/icons/suitcase.svg" alt="suitcase" />
         </template>
         <template #content>
-          <!-- Bazarkhodro -->
-          <div class="resume-right__info-card">
-            <h3 class="resume-right__info-card__position">
-              Front-end Developer
-            </h3>
-            <div class="flex-space-between">
-              <div class="resume-right__info-card__location">
-                Tose-e Tejarat Chabok Garayan
-              </div>
-              <div class="resume-right__info-card__date">
-                Sep. 2021 - present
-              </div>
+          <!-- bazarkhodro -->
+          <div class="work-exp bottom-spacer-3">
+            <div class="work-exp--title">
+              <div>Front-end Developer at Bazarkhodro</div>
+              <span>Sep. 2021 - present (9 mos.)</span>
             </div>
-            <div class="resume-right__info-card__description">
+
+            <p class="work-exp--description">
               Working on five repositories including two websites and three
               admin panels.
-              <br />
-              <a
-                href="https://bazarkhodro.ir/"
-                style="font-weight: bold"
-                target="_blank"
-              >
-                Bazarkhodro.ir
-              </a>
-              : A feature-rich website enabling users to buy/sell cars in the
-              country.
-              <br />
-              <br />
-              <a
-                href="https://rentifa.com/"
-                style="font-weight: bold"
-                target="_blank"
-              >
-                Rentifa.com
-              </a>
-              : A useful website for users to rent cars in specific cities of
-              the country. Also, provided admin panels for agents to be able to
-              put their vehicles on the website for renting.
-            </div>
+            </p>
+
+            <ul class="work-exp--tech">
+              <li>
+                <TechBadge text="Vue.js" />
+              </li>
+              <li>
+                <TechBadge text="Nuxt.js" />
+              </li>
+              <li>
+                <TechBadge text="Vuetify.js" />
+              </li>
+              <li>
+                <TechBadge text="SEO" />
+              </li>
+              <li>
+                <TechBadge text="I18n" />
+              </li>
+              <li>
+                <TechBadge text="Responsive design" />
+              </li>
+              <li>
+                <TechBadge text="Web Performance" />
+              </li>
+            </ul>
+
+            <ul class="work-exp--products">
+              <li class="bottom-spacer-1">
+                <img
+                  src="~/assets/images/logos/rentifa.png"
+                  alt="bazarkhodro fav icon"
+                  class="rectangle"
+                />
+                <span>
+                  <a
+                    href="https://rentifa.com/"
+                    style="font-weight: bold"
+                    target="_blank"
+                  >
+                    Rentifa.com
+                  </a>
+                  is a bilingual website providing car rental service in the
+                  country and neighboring countries.
+                </span>
+              </li>
+
+              <li>
+                <img
+                  src="~/assets/images/logos/bazarkhodro.svg"
+                  alt="bazarkhodro fav icon"
+                  class="rectangle"
+                />
+                <span>
+                  <a
+                    href="https://bazarkhodro.ir/"
+                    target="_blank"
+                    class="fw-bold"
+                  >
+                    Bazarkhodro.ir
+                  </a>
+                  is a feature-rich website enabling users to buy/sell cars in
+                  the country.
+                </span>
+              </li>
+            </ul>
           </div>
 
           <!-- Ryca -->
-          <div class="resume-right__info-card">
-            <h3 class="resume-right__info-card__position">
-              Front-end Developer
-            </h3>
-            <div class="flex-space-between">
-              <div class="resume-right__info-card__location">
-                Avay-e Hooshmand-e Ryca
-              </div>
-              <div class="resume-right__info-card__date">
-                Jun. 2021 - Sep. 2021
-              </div>
+          <div class="work-exp bottom-spacer-3">
+            <div class="work-exp--title">
+              <div>Front-end Developer at Ryca</div>
+              <span>Jun. 2021 - Sep. 2021 (4 mos.)</span>
             </div>
-            <div class="resume-right__info-card__description">
-              My internship job which I worked on two admin panels.
-              <br />
-              <a
-                href="https://msmarket.ir/"
-                style="font-weight: bold"
-                target="_blank"
-              >
-                Msmarket.ir
-              </a>
-              : which was the one that played a bigger role in, was for managing
-              stockholders' information of a particular company. The atmosphere
-              was fun and I worked with awesome people there!
-            </div>
+
+            <p class="work-exp--description">
+              My internship job which I worked on two admin panels. I worked
+              with awesome people there!
+            </p>
+
+            <ul class="work-exp--tech">
+              <li>
+                <TechBadge text="Vue.js" />
+              </li>
+              <li>
+                <TechBadge text="Nuxt.js" />
+              </li>
+              <li>
+                <TechBadge text="Vuetify.js" />
+              </li>
+              <li>
+                <TechBadge text="SCSS" />
+              </li>
+              <li>
+                <TechBadge text="GIT" />
+              </li>
+              <li>
+                <TechBadge text="API calls" />
+              </li>
+            </ul>
+
+            <ul class="work-exp--products">
+              <li class="bottom-spacer-1">
+                <img
+                  src="~/assets/images/logos/ryca.svg"
+                  alt="bazarkhodro fav icon"
+                  class="square"
+                />
+                <span>
+                  <a
+                    href="https://msmarket.ir/"
+                    style="font-weight: bold"
+                    target="_blank"
+                  >
+                    Msmarket.ir
+                  </a>
+                  is a convenient admin panel for managing stockholders'
+                  information of a particular company.
+                </span>
+              </li>
+            </ul>
           </div>
 
-          <!-- self employed -->
-          <div class="resume-right__info-card">
-            <h3 class="resume-right__info-card__position">
-              Front-end Developer
-            </h3>
-            <div class="flex-space-between">
-              <div class="resume-right__info-card__location">
-                Self-employed (Freelancing)
-              </div>
-              <div class="resume-right__info-card__date">
-                Feb 2020 - Jun. 2021
-              </div>
+          <!-- freelance -->
+          <div class="work-exp">
+            <div class="work-exp--title">
+              <div>Freelance Front-end Developer</div>
+              <span>Feb 2020 - Jun. 2021 (~1.5 yr.)</span>
             </div>
-            <div class="resume-right__info-card__description">
-              Before making use of the power of frameworks, I started with some
-              free-lance projects using vanilla HTML/CSS/Javascript to fully
-              understand the basics. the following projects are two examples of
-              my work when I first began my journey:
-              <br />
-              <a
-                href="https://nutricasteel.com/"
-                style="font-weight: bold"
-                target="_blank"
-              >
-                Nutricasteel.com
-              </a>
-              : A website belonging to a small start-up called "Nutricasteel" to
-              better introduce their products to their customers from various
-              countries.
-              <br />
-              <br />
-              <a
-                href="https://hivasls2.ir/"
-                style="font-weight: bold"
-                target="_blank"
-              >
-                Hivasls.ir
-              </a>
-              : A single-page website being a door for students of
-              "Shokuh-e-hiva" language institute to enter their online learning
-              platform panel.
-            </div>
+
+            <ul class="work-exp--tech">
+              <li>
+                <TechBadge text="HTML5" />
+              </li>
+              <li>
+                <TechBadge text="CSS3" />
+              </li>
+              <li>
+                <TechBadge text="JAVASCRIPT" />
+              </li>
+            </ul>
+
+            <ul class="work-exp--products">
+              <li class="bottom-spacer-1">
+                <img
+                  src="~/assets/images/logos/nutrica.png"
+                  alt="bazarkhodro fav icon"
+                  class="square black-background"
+                />
+                <span>
+                  <a
+                    href="https://nutricasteel.com/"
+                    style="font-weight: bold"
+                    target="_blank"
+                  >
+                    Nutricasteel.com
+                  </a>
+                  is a website belonging to a start-up called "Nutricasteel" to
+                  introduce their products to their customers from various
+                  countries.
+                </span>
+              </li>
+
+              <li>
+                <img
+                  src="~/assets/images/logos/hivasls.png"
+                  alt="bazarkhodro fav icon"
+                  class="square"
+                />
+                <span>
+                  <a
+                    href="https://hivasls2.ir/"
+                    style="font-weight: bold"
+                    target="_blank"
+                  >
+                    Hivasls.ir
+                  </a>
+                  is a single-page website for students of "Shokuh-e-hiva"
+                  language institute to enter their online learning platform
+                  panel. (BigBlueButton)
+                </span>
+              </li>
+            </ul>
           </div>
         </template>
       </ResumeInformationCard>
-    </div>
-  </div>
+    </section>
+  </main>
 </template>
 
 <script setup>
 import ResumeInformationCard from '~/components/cards/ResumeInformationCard'
-</script>
+import TechBadge from '../components/badges/TechBadge'
+import { onMounted, ref } from 'vue'
 
-<script>
-export default {
-  layout: 'empty',
-}
+const onMobile = ref()
+
+onMounted(() => {
+  onMobile.value = window.innerWidth < 1000
+})
 </script>
 
 <style lang="scss" scoped>
-@import 'assets/styles/variables';
 $breakpoint-layout-shift: 1050px;
 
 h1 {
-  font-size: min(10vw, 6rem);
-  margin-bottom: 2rem;
+  font-size: var(--fs-huge);
   margin-top: min(3vw, 4rem);
   text-transform: uppercase;
   letter-spacing: 3px;
-}
-
-h2 {
-  font-size: 2.1rem;
-}
-
-h3 {
-  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: var(--fw-bold);
 }
 
 @media screen and (max-width: $breakpoint-layout-shift) {
@@ -394,51 +481,48 @@ h3 {
 
 .resume {
   margin-inline: auto;
-  border-radius: 20px;
   overflow: hidden;
-  max-width: 1400px;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  color: $color-green-dark;
+  color: var(--clr-primary-700);
 
   @media screen and (max-width: $breakpoint-layout-shift) {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   &-left {
     &-column {
-      background: $color-background;
+      background: var(--clr-primary-300);
       padding-inline: min(7vw, 3rem);
     }
 
     &__image {
-      display: grid;
-      place-items: center;
-      padding-block: min(10vw, 5.5rem);
-      background: $color-background;
-      border-radius: 10px;
+      padding-block: min(10vw, 3.5rem);
+      background: var(--clr-primary-300);
 
       img {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         border-radius: 50%;
+        border: 2px solid var(--clr-primary-100);
 
         @media screen and (max-width: $breakpoint-layout-shift) {
           width: max(35vw, 200px);
           height: max(35vw, 200px);
         }
       }
+
+      &.mobile-image {
+        width: 100vw;
+        margin-inline-start: -5vw;
+      }
     }
 
     &__box {
-      margin-bottom: 9rem;
-      color: $color-green-dark;
-
       &-title {
-        text-transform: uppercase;
-        padding-bottom: 0.5rem;
-        margin-bottom: 2rem;
-        border-bottom: 3px solid $color-green-dark;
+        margin-bottom: 1.5rem;
+        border-bottom: 3px solid var(--clr-primary-700);
       }
 
       .contact-box {
@@ -450,7 +534,7 @@ h3 {
 
         div {
           grid-area: img;
-          background: $color-green-dark;
+          background: var(--clr-primary-700);
           border-radius: 50%;
           padding: 0.4rem;
           width: 30px;
@@ -473,46 +557,41 @@ h3 {
         a {
           text-decoration: none;
           grid-area: subtitle;
-          font-size: $font-body;
         }
       }
 
-      .expertise-box {
+      .pre-skills-box {
         margin-block: 1.25rem;
         display: flex;
         justify-content: space-between;
         place-items: center;
 
-        h3 {
-          text-transform: uppercase;
-        }
-
         div {
-          height: 35px;
-          width: 70px;
-          background: $color-green-dark;
+          padding-block: 0.4rem;
+          align-self: stretch;
+          width: 130px;
+          background: var(--clr-primary-700);
           color: white;
-          font-weight: bold;
+          font-weight: var(--fw-bold);
           border-radius: 5px;
-          font-size: $font-body;
-          display: grid;
-          place-items: center;
+          text-transform: capitalize;
+          text-align: center;
+          font-size: 90%;
         }
       }
 
-      .pre-skills-box {
-        li {
-          margin-block: 1.25rem;
-          display: flex;
-          align-items: center;
-          text-transform: capitalize;
+      .education-item {
+        .bulleted {
+          margin-top: 0.75rem;
 
-          .bullet {
-            width: 10px;
-            height: 10px;
-            background: $color-green-dark;
-            margin-right: 0.75rem;
+          &::before {
+            content: '';
+            width: 9px;
+            height: 9px;
             border-radius: 50%;
+            margin-right: 5px;
+            display: inline-block;
+            background-color: var(--clr-primary-700);
           }
         }
       }
@@ -527,55 +606,70 @@ h3 {
       @media screen and (max-width: $breakpoint-layout-shift) {
         grid-row: 1;
       }
-    }
 
-    &__subheader {
-      text-transform: capitalize;
-      font-size: $font-body;
-      margin-bottom: 6rem;
+      .expertise {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .work-exp {
+        &--title {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-between;
+
+          div {
+            font-size: var(--fs-sub-primary-heading);
+          }
+
+          span {
+            opacity: 0.8;
+          }
+        }
+
+        &--tech {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 0.5rem;
+          margin-bottom: 1rem;
+          gap: 0.75rem;
+        }
+
+        &--products {
+          li {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 110px 1fr;
+            gap: 1rem;
+
+            @media screen and (max-width: $breakpoint-layout-shift) {
+              grid-template-columns: 50px 1fr;
+            }
+
+            img {
+              justify-self: center;
+
+              &.square {
+                width: 60px;
+                aspect-ratio: 1 / 1;
+              }
+
+              &.black-background {
+                background: rgba(0, 0, 0);
+                border-radius: 10px;
+              }
+            }
+          }
+        }
+      }
     }
 
     &__profile {
-      font-size: $font-body;
       line-height: 26px;
       text-align: justify;
       text-justify: inter-word;
-    }
-
-    &__info-card {
-      margin-bottom: 4rem;
-
-      .flex-space-between {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 0.5rem;
-
-        @media screen and (max-width: 550px) {
-          flex-direction: column;
-          text-align: center;
-          margin-block: 1.5rem;
-        }
-      }
-
-      &__location {
-        font-size: $font-body;
-      }
-
-      &__date {
-        font-size: $font-body;
-        text-align: right;
-
-        @media screen and (max-width: $breakpoint-layout-shift) {
-          text-align: center;
-        }
-      }
-
-      &__description {
-        font-size: $font-body;
-        line-height: 25px;
-        text-align: justify;
-        text-justify: inter-word;
-      }
     }
   }
 }
